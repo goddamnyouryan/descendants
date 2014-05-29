@@ -169,6 +169,7 @@ PLATFORMS
 
 DEPENDENCIES
   backbone-on-rails
+  bundler (= 1.6.2)
   byebug
   coffee-rails (~> 4.0.0)
   compass-rails
