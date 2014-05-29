@@ -1,0 +1,12 @@
+= form_for [:admin, @director, @video] do |f|
+  = render 'shared/errors', object: @video
+
+  .form-field
+    = f.label :title
+    = f.text_field :title
+
+  .form-field
+    = f.label :client
+    = f.text_field :client
+
+  = f.submit 'Save'

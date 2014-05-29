@@ -6,6 +6,7 @@ class Admin::DirectorsController < Admin::BaseController
   end
 
   def edit
+    @videos = @director.videos
   end
 
   def create

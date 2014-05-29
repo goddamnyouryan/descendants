@@ -6,5 +6,6 @@ class DirectorsController < ApplicationController
   end
 
   def show
+    @videos = @director.videos
   end
 end

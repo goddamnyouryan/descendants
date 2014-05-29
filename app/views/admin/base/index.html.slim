@@ -7,8 +7,8 @@ h2 Directors
 ul
   - @directors.each do |director|
     = content_tag_for :li, director do
-      = director.name
+      h3 = director.name
       ul.actions
         li = link_to 'View', director
         li = link_to 'Edit', edit_admin_director_path(director)
-        li = link_to 'Delete', admin_director_path(director), method: :delete, data: { confirm: "Are you sure you want to delete #{director.name}?" }
+        li = link_to 'Delete', admin_director_path(director), delete_confirm(director.name)
