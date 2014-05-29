@@ -1,0 +1,12 @@
+body {
+  background: $background;
+  color: $text;
+}
+
+a {
+  color: $text;
+
+  &:hover {
+    color: $highlight;
+  }
+}
