@@ -72,7 +72,7 @@ GEM
     execjs (2.1.0)
     fssm (0.2.10)
     hike (1.2.3)
-    i18n (0.6.10)
+    i18n (0.6.9)
     jbuilder (2.0.7)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -169,7 +169,6 @@ PLATFORMS
 
 DEPENDENCIES
   backbone-on-rails
-  bundler (= 1.6.2)
   byebug
   coffee-rails (~> 4.0.0)
   compass-rails
