@@ -1,12 +1,39 @@
 body {
+  @include sans(18px);
   background: $background;
   color: $text;
+  text-transform: uppercase;
 }
 
 a {
+  @include transition(color);
   color: $text;
+  text-decoration: none;
+
+  &.light { color: $background; }
 
   &:hover {
     color: $highlight;
+  }
+}
+
+header {
+  @include clearfix;
+  position: absolute;
+  width: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+
+  @include media(600px) {
+    padding: 25px;
+    font-size: 14px;
+  }
+
+  h1 {
+    @include float-left;
+  }
+
+  nav {
+    @include float-right;
   }
 }

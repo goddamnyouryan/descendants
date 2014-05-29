@@ -1,0 +1,36 @@
+section#hero {
+  max-height: 40rem;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 55px;
+    width: 100%;
+    text-align: center;
+    color: $background;
+    letter-spacing: 5px;
+
+    h1 {
+      @include sans-bold(72px);
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+
+      @include media(600px) {
+        @include sans-bold(48px);
+      }
+
+      @include media(400px) {
+        @include sans-bold(32px);
+      }
+    }
+  }
+}
