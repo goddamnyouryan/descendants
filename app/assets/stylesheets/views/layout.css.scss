@@ -1,22 +1,3 @@
-body {
-  @include sans(18px);
-  background: $background;
-  color: $text;
-  text-transform: uppercase;
-}
-
-a {
-  @include _transition(color);
-  color: $text;
-  text-decoration: none;
-
-  &.light { color: $background; }
-
-  &:hover {
-    color: $highlight;
-  }
-}
-
 header {
   @include clearfix;
   position: absolute;
@@ -31,27 +12,14 @@ header {
 
   h1 {
     @include float-left;
+    font-weight: 700;
   }
 
   nav {
     @include float-right;
 
     a {
-      @include _transition(all);
-      $padding: 10px;
-      border: 2px solid $background;
-      padding: $padding;
-
-      &:hover {
-        background: $highlight;
-        border-color: $highlight;
-        color: $background;
-      }
+      @include button;
     }
   }
-}
-
-#container {
-  width: 1140px;
-  margin: 50px auto;
 }

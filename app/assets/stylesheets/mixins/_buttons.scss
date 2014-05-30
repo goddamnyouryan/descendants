@@ -1,0 +1,12 @@
+@mixin button {
+  @include _transition(all);
+  $padding: 10px;
+  border: 2px solid $background;
+  padding: $padding;
+
+  &:hover {
+    background: $highlight;
+    border-color: $highlight;
+    color: $background;
+  }
+}

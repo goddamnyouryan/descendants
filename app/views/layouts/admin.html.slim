@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Descendants
+    = render 'shared/meta'
+    = stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  body
+    header
+      h1 = link_to 'Descendants Admin', admin_root_path
+      nav
+        ul
+          li = link_to 'Back to Site', root_path
+          li = link_to 'New Director', new_admin_director_path
+
+    #container
+      = yield

@@ -1,0 +1,34 @@
+form {
+  margin: 25px 0;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+}
+
+input[type=text], textarea {
+  @include sans(12px);
+  background: lighten($background, 5%);
+  border: 1px solid $text;
+  outline: none;
+  padding: 10px;
+  width: 400px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+input[type=submit] {
+  @include button;
+  cursor: pointer;
+  background: $text;
+  color: $background;
+  padding: 10px 30px;
+  border-color: $text;
+}

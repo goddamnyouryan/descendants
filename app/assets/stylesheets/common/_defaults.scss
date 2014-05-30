@@ -1,0 +1,23 @@
+body {
+  @include sans(18px);
+  background: $background;
+  color: $text;
+  text-transform: uppercase;
+}
+
+a {
+  @include _transition(color);
+  color: $text;
+  text-decoration: none;
+
+  &.light { color: $background; }
+
+  &:hover {
+    color: $highlight;
+  }
+}
+
+#container {
+  width: 1140px;
+  margin: 50px auto;
+}

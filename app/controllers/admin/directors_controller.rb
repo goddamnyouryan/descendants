@@ -13,7 +13,7 @@ class Admin::DirectorsController < Admin::BaseController
     @director = Director.new director_params
 
     if @director.save
-      redirect_to @director, notice: "#{@director.name} was successfully created."
+      redirect_to redirect, notice: "#{@director.name} was successfully created."
     else
       render :new
     end
@@ -21,7 +21,7 @@ class Admin::DirectorsController < Admin::BaseController
 
   def update
     if @director.update director_params
-      redirect_to @director, notice: "#{@director.name} was successfully updated."
+      redirect_to redirect, notice: "#{@director.name} was successfully updated."
     else
       render :edit
     end
@@ -36,5 +36,9 @@ class Admin::DirectorsController < Admin::BaseController
 
   def director_params
     params.require(:director).permit(:name)
+  end
+
+  def redirect
+    edit_admin_director_path(@director)
   end
 end

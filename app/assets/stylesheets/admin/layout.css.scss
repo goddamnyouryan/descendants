@@ -1,0 +1,47 @@
+body {
+  text-transform: none;
+}
+
+header {
+  @include clearfix;
+  background: $text;
+  padding: 25px;
+
+  a {
+    color: $background;
+  }
+
+  h1 {
+    @include float-left;
+  }
+
+  nav {
+    @include float-right;
+  }
+}
+
+h2 {
+  @include sans-bold(20px);
+}
+
+nav {
+
+  ul {
+    @include clearfix;
+  }
+
+  li {
+    @include float-left;
+    margin-right: 15px;
+
+    &:last-of-type { margin-right: 0; }
+  }
+}
+
+ul.videos, ul.directors {
+  margin: 25px 0;
+
+  li {
+    margin-bottom: 15px;
+  }
+}

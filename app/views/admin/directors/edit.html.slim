@@ -1,4 +1,4 @@
-h1 Edit Director
+h2 Edit Director
 nav
   ul
     li = link_to 'View', @director
@@ -11,10 +11,12 @@ nav
   ul
     li = link_to 'New Video', new_admin_director_video_path(@director)
 
-- @videos.each do |video|
-  = content_tag_for :li, video do
-    h3 = video.title
-    h4 = video.client
-    ul.actions
-      li = link_to 'Edit', edit_admin_director_video_path(@director, video)
-      li = link_to 'Delete', admin_director_video_path(@director, video), delete_confirm(video.title)
+ul.videos
+  - @videos.each do |video|
+    = content_tag_for :li, video do
+      h3 = video.title
+      h4 = video.client
+      nav
+        ul
+          li = link_to 'Edit', edit_admin_director_video_path(@director, video)
+          li = link_to 'Delete', admin_director_video_path(@director, video), delete_confirm(video.title)

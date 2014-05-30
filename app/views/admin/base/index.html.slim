@@ -1,14 +1,9 @@
-h1 Admin
-nav
-  ul
-    li = link_to 'New Director', new_admin_director_path
-
 h2 Directors
-ul
+ul.directors
   - @directors.each do |director|
     = content_tag_for :li, director do
-      h3 = director.name
-      ul.actions
-        li = link_to 'View', director
-        li = link_to 'Edit', edit_admin_director_path(director)
-        li = link_to 'Delete', admin_director_path(director), delete_confirm(director.name)
+      h3 = link_to director.name, director
+      nav
+        ul
+          li = link_to 'Edit', edit_admin_director_path(director)
+          li = link_to 'Delete', admin_director_path(director), delete_confirm(director.name)
