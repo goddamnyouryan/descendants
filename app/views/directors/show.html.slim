@@ -1,7 +1,4 @@
-h1 = @director.name
+= content_for :hero_title do
+  h1 = @director.name
 
-ul
-  - @videos.each do |video|
-    = content_tag_for :li, video do
-      h2 = video.title
-      h3 = video.client
+= render 'shared/videos', videos: @videos

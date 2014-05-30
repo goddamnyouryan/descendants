@@ -8,14 +8,13 @@ html
     = csrf_meta_tags
 
   body
-    - if content_for?(:hero)
-      section#hero
-        header
-          h1 = link_to 'Descendants', root_path, class: 'light'
-          nav
-            h2 = link_to 'Directors', root_path, class: 'light'
-        = image_tag yield(:hero)
-        = hero_title
+    section#hero
+      header
+        h1 = link_to 'Descendants', root_path, class: 'light'
+        nav
+          h2 = link_to 'Directors', root_path, class: 'light'
+      = hero_image
+      = hero_title
 
     #container
       = yield
