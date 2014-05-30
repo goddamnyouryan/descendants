@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'slim-rails'
 gem 'spring', group: :development
 gem 'unicorn'
+gem 'friendly_id'
 
 group :development, :test do
   gem 'byebug'

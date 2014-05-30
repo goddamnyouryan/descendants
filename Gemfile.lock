@@ -70,9 +70,11 @@ GEM
     ejs (1.1.1)
     erubis (2.7.0)
     execjs (2.1.0)
+    friendly_id (5.0.4)
+      activerecord (>= 4.0.0)
     fssm (0.2.10)
     hike (1.2.3)
-    i18n (0.6.9)
+    i18n (0.6.10)
     jbuilder (2.0.7)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -172,6 +174,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.0.0)
   compass-rails
+  friendly_id
   jbuilder (~> 2.0)
   jquery-rails
   pg
