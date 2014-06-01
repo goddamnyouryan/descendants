@@ -1,1 +1,1 @@
-Fog.credentials = { path_style: true }
+Fog.credentials[:path_style] = true
