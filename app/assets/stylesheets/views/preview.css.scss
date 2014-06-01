@@ -1,0 +1,27 @@
+body#preview {
+  background: $text;
+  color: $background;
+
+  h1 {
+    @include sans-bold(72px);
+    letter-spacing: 5px;
+    text-align: center;
+
+    @include media(400px) {
+      @include sans-bold(30px);
+    }
+  }
+
+  #phrase {
+    height: 33%;
+    top:0; bottom:0; left:0; right: 0;
+    margin: auto;
+    position: absolute;
+  }
+
+  h2 {
+    @include sans(20px);
+    text-align: center;
+    margin-top: 100px;
+  }
+}
