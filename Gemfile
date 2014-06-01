@@ -16,6 +16,7 @@ gem 'spring', group: :development
 gem 'unicorn'
 gem 'friendly_id'
 gem 'heroku'
+gem 'asset_sync'
 
 group :development, :test do
   gem 'byebug'
