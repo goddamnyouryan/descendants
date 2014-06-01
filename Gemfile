@@ -1,7 +1,6 @@
-source 'https://rubygems.org'
+source 'https://production.cf.rubygems.org'
 ruby '2.1.2'
 
-gem 'bundler', '~> 1.6.2'
 gem 'rails', '4.1.1'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
@@ -16,7 +15,6 @@ gem 'slim-rails'
 gem 'spring', group: :development
 gem 'unicorn'
 gem 'friendly_id'
-gem 'heroku'
 
 group :development, :test do
   gem 'byebug'
