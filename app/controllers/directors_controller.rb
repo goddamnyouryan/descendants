@@ -14,7 +14,6 @@ class DirectorsController < ApplicationController
   private
 
   def render_preview?
-    @phrase = PREVIEW_PHRASES.sample
     render layout: 'preview', action: :preview if ENV['PREVIEW_PAGE']
   end
 end

@@ -6,6 +6,7 @@ body#preview {
     @include sans-bold(72px);
     letter-spacing: 5px;
     text-align: center;
+    margin: 50px 0;
 
     @include media(400px) {
       @include sans-bold(30px);
@@ -22,6 +23,11 @@ body#preview {
   h2 {
     @include sans(20px);
     text-align: center;
-    margin-top: 100px;
+  }
+
+  a {
+    color: $background;
+
+    &:hover { color: $highlight; }
   }
 }
