@@ -15,6 +15,7 @@ gem 'slim-rails'
 gem 'spring', group: :development
 gem 'unicorn'
 gem 'friendly_id'
+gem 'heroku'
 
 group :development, :test do
   gem 'byebug'
