@@ -26,5 +26,15 @@ module Descendants
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    #
+    config.action_mailer.smtp_settings = {
+      :address              => 'smtp.mandrillapp.com',
+      :port                 => 587,
+      :domain               => 'www.descendants.tv',
+      :user_name            => ENV['DESCENDANTS_MANDRILL_USERNAME'],
+      :password             => ENV['DESCENDANTS_MANDRILL_API_KEY'],
+      :authentication       => 'plain',
+      :enable_starttls_auto => true  }
+    config.action_mailer.default_url_options = { host: 'www.descendants.tv' }
   end
 end
