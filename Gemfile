@@ -17,6 +17,7 @@ gem 'unicorn'
 gem 'friendly_id'
 gem 'heroku'
 gem 'asset_sync'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'byebug'
