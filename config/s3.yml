@@ -1,0 +1,11 @@
+default: &default
+  access_key_id: <%= ENV['DESCENDANTS_AMAZON_ACCESS_KEY'] %>
+  secret_access_key: <%= ENV['DESCENDANTS_AMAZON_SECRET_KEY'] %>
+
+development:
+  <<: *default
+  bucket: 'descendants.development'
+
+production:
+  <<: *default
+  bucket: 'descendants.production'

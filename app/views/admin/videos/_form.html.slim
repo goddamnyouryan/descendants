@@ -10,3 +10,8 @@
     = f.text_field :client
 
   = f.submit 'Save'
+
+= s3_uploader_form callback_url: admin_director_videos_path, id: 's3_uploader', callback_param: 'video[mp4]', expiration: 24.hours.from_now.utc.iso8601, max_file_size: 100.megabytes do
+  = file_field_tag :file, multiple: true
+
+= render 's3_template'

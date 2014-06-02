@@ -18,6 +18,9 @@ gem 'friendly_id'
 gem 'heroku'
 gem 'asset_sync'
 gem 'newrelic_rpm'
+gem 'aws-sdk'
+gem 'paperclip'
+gem 's3_direct_upload'
 
 group :development, :test do
   gem 'byebug'
