@@ -37,4 +37,5 @@ class Medium < ActiveRecord::Base
 
     objects[direct_upload_url_data[:path]].delete
   end
+  handle_asynchronously :transfer_and_cleanup
 end

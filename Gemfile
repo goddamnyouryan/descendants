@@ -21,6 +21,7 @@ gem 'newrelic_rpm'
 gem 'aws-sdk'
 gem 'paperclip'
 gem 's3_direct_upload'
+gem 'delayed_job_active_record'
 
 group :development, :test do
   gem 'byebug'
