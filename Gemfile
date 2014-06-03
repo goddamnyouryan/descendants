@@ -29,6 +29,7 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'workless'
 end
 
 group :doc do
