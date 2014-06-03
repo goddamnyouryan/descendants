@@ -12,5 +12,7 @@ Rails.application.routes.draw do
     root to: 'base#index'
   end
 
+  post 'contact', to: 'contact_form#create'
+
   root 'directors#index'
 end

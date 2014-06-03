@@ -3,7 +3,7 @@ class DirectorsController < ApplicationController
   before_action :render_preview?, only: :index
 
   def index
-    @directors = Director.all
+    @directors = Director.includes(:videos).all.map {|director| director.videos.sample }
     @recent = Video.limit(4).order('created_at desc')
   end
 

@@ -10,8 +10,8 @@ class Director < ActiveRecord::Base
     name_changed?
   end
 
-  def hero
+  def image(style = :original)
     medium = Medium.where(video_id: videos.map(&:id))
-    medium.present? ? medium.sample.attachment : nil
+    medium.present? ? medium.sample.attachment(style) : nil
   end
 end

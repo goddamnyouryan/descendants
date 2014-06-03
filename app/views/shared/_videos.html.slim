@@ -1,7 +1,12 @@
+- show_director_name = show_director_name || false
 ul.videos
   - videos.each do |video|
     = content_tag_for :li, video do
-      = link_to video.director do
+      - director = video.director
+      = link_to director do
         = image_tag video.thumb
-        h2 = video.title
-        h3 = video.client
+        - if show_director_name
+          h2 = video.director.name
+        - else
+          h2 = video.title
+          h3 = video.client

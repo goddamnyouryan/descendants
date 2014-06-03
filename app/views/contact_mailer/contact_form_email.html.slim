@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Descendants
+
+  body
+    p Hi Tasha,
+
+    p Someone is contacting you via the contact form on descendants.tv
+
+    p Their name: #{@name}
+
+    p Their email: #{link_to @email, "mailto:#{@email}"}
+
+    p Message:
+    p = @message

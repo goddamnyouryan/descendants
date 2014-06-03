@@ -1,8 +1,9 @@
-@mixin button {
+@mixin button($border: $background) {
   @include _transition(all);
   $padding: 10px;
-  border: 2px solid $background;
+  border: 2px solid $border;
   padding: $padding;
+  background: transparent;
 
   &:hover {
     background: $highlight;
