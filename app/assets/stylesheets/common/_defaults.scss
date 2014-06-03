@@ -18,6 +18,17 @@ a {
 }
 
 #container {
-  width: 1140px;
+  $width: 1140px;
+  width: $width;
   margin: 50px auto;
+
+  @include media($width) {
+    width: 90%;
+  }
+}
+
+h1 {
+  @include sans-bold(36px);
+  text-align: center;
+  margin: 50px 0;
 }

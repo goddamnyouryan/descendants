@@ -28,20 +28,21 @@ nav {
 
   ul {
     @include clearfix;
-  }
+    margin: 0;
 
-  li {
-    @include float-left;
-    margin-right: 15px;
+    li {
+      @include float-left;
+      margin: 0 15px 0 0;
 
-    &:last-of-type { margin-right: 0; }
+      &:last-of-type { margin-right: 0; }
+    }
   }
 }
 
-ul.videos, ul.directors, ul.media {
+ul {
   margin: 25px 0;
 
   li {
-    margin-bottom: 15px;
+    margin: 0 0 15px 0;
   }
 }

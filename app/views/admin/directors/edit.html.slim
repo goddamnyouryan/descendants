@@ -11,7 +11,7 @@ nav
   ul
     li = link_to 'New Video', new_admin_director_video_path(@director)
 
-ul.videos
+ul
   - @videos.each do |video|
     = content_tag_for :li, video do
       h3 = video.title

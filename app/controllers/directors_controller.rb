@@ -4,7 +4,7 @@ class DirectorsController < ApplicationController
 
   def index
     @directors = Director.all
-    @recent = Video.limit(5).order('created_at desc')
+    @recent = Video.limit(4).order('created_at desc')
   end
 
   def show

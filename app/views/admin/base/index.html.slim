@@ -1,5 +1,5 @@
 h2 Directors
-ul.directors
+ul
   - @directors.each do |director|
     = content_tag_for :li, director do
       h3 = link_to director.name, director

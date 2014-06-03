@@ -9,4 +9,9 @@ class Director < ActiveRecord::Base
   def should_generate_new_friendly_id?
     name_changed?
   end
+
+  def hero
+    medium = Medium.where(video_id: videos.map(&:id))
+    medium.present? ? medium.sample.attachment : nil
+  end
 end

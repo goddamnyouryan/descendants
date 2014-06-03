@@ -5,7 +5,7 @@ h2 Edit Video for #{@director.name}
 
 - if @media.present?
   h2 Media
-  ul.media
+  ul
     - @media.each do |medium|
       = content_tag_for :li, medium do
         - name = medium.attachment_file_name

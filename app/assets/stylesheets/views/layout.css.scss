@@ -11,8 +11,9 @@ header {
   }
 
   h1 {
+    @include sans-bold(18px);
     @include float-left;
-    font-weight: 700;
+    margin: 0;
   }
 
   nav {

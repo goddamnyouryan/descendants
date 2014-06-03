@@ -1,6 +1,7 @@
-ul
+ul.videos
   - videos.each do |video|
     = content_tag_for :li, video do
       = link_to video.director do
+        = image_tag video.thumb
         h2 = video.title
         h3 = video.client

@@ -10,11 +10,7 @@ module ApplicationHelper
   end
 
   def hero_image
-    if content_for?(:hero)
-      image_tag(content_for(:hero))
-    else
-      random = (1..4).to_a.sample
-      image_tag("/bg-filler-#{random}.jpg")
-    end
+    content = content_for?(:hero) ? content_for(:hero) : Filler::Image.new(width: 1900, height: 1182).url
+    image_tag content
   end
 end

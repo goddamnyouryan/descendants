@@ -23,6 +23,7 @@ section#hero {
     h1 {
       @include sans-bold(72px);
       text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+      margin: 0;
 
       @include media(600px) {
         @include sans-bold(48px);

@@ -27,7 +27,11 @@ class Video < ActiveRecord::Base
 
   def thumb(style = :thumb)
     medium = media.find_by(type: 'image')
-    medium.attachment(style) if medium
+    if medium
+      medium.attachment(style)
+    else
+      Filler::Image.new(width: 285, height: 160).url
+    end
   end
 
   def find_media(type)
