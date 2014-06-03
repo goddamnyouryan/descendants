@@ -2,3 +2,20 @@ h2 Edit Video for #{@director.name}
 = render 'nav'
 
 == render 'form'
+
+- if @media.present?
+  h2 Media
+  ul.media
+    - @media.each do |medium|
+      = content_tag_for :li, medium do
+        - name = medium.attachment_file_name
+        =' name
+        ' -
+        = link_to 'Delete', admin_director_video_medium_path(@director, @video, medium), method: :delete, data: { confirm: "Are you sure you want to delete #{name}?" }
+
+
+h2 Upload Media
+= s3_uploader_form callback_url: admin_director_video_media_path(@director, @video), id: 's3_uploader', callback_param: 'video[media]', expiration: 24.hours.from_now.utc.iso8601, max_file_size: 200.megabytes do
+  = file_field_tag :file, multiple: true
+
+= render 's3_template'

@@ -8,4 +8,12 @@ class ApplicationController < ActionController::Base
   def director_id
     params[:director_id] || params[:id]
   end
+
+  def set_video
+    @video = Video.friendly.find video_id
+  end
+
+  def video_id
+    params[:video_id] || params[:id]
+  end
 end

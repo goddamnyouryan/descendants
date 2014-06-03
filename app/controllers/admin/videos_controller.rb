@@ -10,13 +10,14 @@ class Admin::VideosController < Admin::BaseController
     @video = @director.videos.build video_params
 
     if @video.save
-      redirect_to edit_admin_director_path(@director), notice: "#{@video.title} added to #{@director.name}."
+      redirect_to edit_admin_director_video_path(@director, @video), notice: "#{@video.title} added to #{@director.name}. Please upload files."
     else
       render :new
     end
   end
 
   def edit
+    @media = @video.media
   end
 
   def update
@@ -33,10 +34,6 @@ class Admin::VideosController < Admin::BaseController
   end
 
   private
-
-  def set_video
-    @video = Video.friendly.find params[:id]
-  end
 
   def video_params
     params.require(:video).permit(:title, :client)
