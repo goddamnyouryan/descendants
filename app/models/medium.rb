@@ -1,7 +1,7 @@
 class Medium < ActiveRecord::Base
   self.inheritance_column = nil
 
-  DIRECT_UPLOAD_URL_FORMAT = %r{\Ahttps:\/\/s3\.amazonaws\.com\/descendants#{!Rails.env.production? ? "\\.#{Rails.env}" : ''}\/(?<path>uploads\/.+\/(?<filename>.+))\z}.freeze
+  DIRECT_UPLOAD_URL_FORMAT = %r{\Ahttps:\/\/s3\.amazonaws\.com\/descendants.#{Rails.env}/(?<path>uploads\/.+\/(?<filename>.+))\z}.freeze
 
   belongs_to :video
 
