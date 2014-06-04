@@ -5,7 +5,7 @@
   padding: $padding;
   background: transparent;
 
-  &:hover {
+  &:hover, &.active {
     background: $highlight;
     border-color: $highlight;
     color: $background;

@@ -8,6 +8,11 @@ html
     = csrf_meta_tags
 
   body
+    section#directors
+      .container
+        h1 Directors
+        = render 'shared/videos', videos: @directors, show_director_name: true
+
     section#hero
       header
         h1 = link_to 'Descendants', root_path, class: 'light'
@@ -16,5 +21,5 @@ html
       = hero_image
       = hero_title
 
-    #container
+    .container
       = yield
