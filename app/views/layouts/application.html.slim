@@ -12,11 +12,10 @@ html
       .container
         h1 Directors
         ul.directors
-          - @directors.each do |video|
-            = content_tag_for :li, video do
-              - director = video.director
+          - @directors.each do |director|
+            = content_tag_for :li, director do
               = link_to director do
-                = image_tag video.thumb
+                = image_tag director.image
                 h2 = director.name
 
     section#hero

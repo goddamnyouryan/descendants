@@ -12,6 +12,6 @@ class Director < ActiveRecord::Base
 
   def image(style = :original)
     medium = Medium.where(video_id: videos.map(&:id))
-    medium.present? ? medium.sample.attachment(style) : nil
+    medium.present? ? medium.sample.attachment(style) : Filler::Image.new(width: 285, height: 160).url
   end
 end

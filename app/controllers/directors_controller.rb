@@ -14,7 +14,7 @@ class DirectorsController < ApplicationController
   private
 
   def set_directors
-    @directors = Director.includes(:videos).all.map {|director| director.videos.sample }
+    @directors = Director.includes(:videos).all
   end
 
   def render_preview?
