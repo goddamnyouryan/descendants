@@ -1,0 +1,20 @@
+@mixin sprite-background($icon, $hover: false) {
+  $map: $sprite-map;
+  @include sprite-dimensions($map, $icon);
+  background: sprite($map, $icon) no-repeat;
+  text-indent: -9999px;
+
+  @if $hover {
+    &:hover {
+      background-position: sprite-position($map, "#{$icon}-hover")
+    }
+  }
+}
+
+@function sprite-width($sprite) {
+  @return image-width(sprite-file($sprite-map, $sprite));
+}
+
+@function sprite-height($sprite) {
+  @return image-height(sprite-file($sprite-map, $sprite));
+}

@@ -1,0 +1,28 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($text, 0.6);
+  z-index: 9999;
+
+  .overlay-content {
+    @include border-radius(4px);
+    @include centered(504px);
+    margin: auto;
+    width: 896px;
+    background: #fff;
+
+    a.close {
+      @include sprite-background(close);
+      top: -(sprite-height(close) / 2);
+      right: -(sprite-width(close) / 2);
+      display: block;
+      position: absolute;
+      text-indent: -9999px;
+      cursor: pointer;
+      z-index: 1;
+    }
+  }
+}

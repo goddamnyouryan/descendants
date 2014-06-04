@@ -9,6 +9,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'backbone-on-rails'
+gem 'skim'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'slim-rails'
@@ -22,6 +23,11 @@ gem 'aws-sdk'
 gem 'paperclip'
 gem 's3_direct_upload'
 gem 'delayed_job_active_record'
+
+group :development do
+  gem 'lol_dba'
+  gem 'bullet'
+end
 
 group :development, :test do
   gem 'byebug'

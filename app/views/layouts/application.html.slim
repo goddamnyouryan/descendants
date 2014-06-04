@@ -11,7 +11,13 @@ html
     section#directors
       .container
         h1 Directors
-        = render 'shared/videos', videos: @directors, show_director_name: true
+        ul.directors
+          - @directors.each do |video|
+            = content_tag_for :li, video do
+              - director = video.director
+              = link_to director do
+                = image_tag video.thumb
+                h2 = director.name
 
     section#hero
       header

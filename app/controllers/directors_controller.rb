@@ -4,7 +4,7 @@ class DirectorsController < ApplicationController
   before_action :render_preview?, only: :index
 
   def index
-    @recent = Video.limit(4).order('created_at desc')
+    @recent = Video.includes(:director).limit(4).order('created_at desc')
   end
 
   def show

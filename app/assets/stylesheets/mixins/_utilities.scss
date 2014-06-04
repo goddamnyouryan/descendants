@@ -18,3 +18,10 @@
 @mixin media($width) {
   @media all and (max-width: $width) { @content; }
 }
+
+@mixin centered($height) {
+  top:0; bottom:0; left:0; right: 0;
+  margin: auto;
+  position: absolute;
+  height: $height;
+}

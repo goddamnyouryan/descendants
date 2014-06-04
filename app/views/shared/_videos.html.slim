@@ -1,7 +1,7 @@
 - show_director_name = show_director_name || false
 ul.videos
   - videos.each do |video|
-    = content_tag_for :li, video do
+    = content_tag_for :li, video, 'data-slug' => video.slug do
       - director = video.director
       = link_to director do
         = image_tag video.thumb

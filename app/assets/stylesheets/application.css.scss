@@ -1,5 +1,7 @@
 @import 'compass';
 @import 'compass/reset';
+$sprite-map: sprite-map('map/*.png', $spacing: 10px);
 @import 'mixins/*';
 @import 'common/*';
 @import 'views/*';
+@import 'video-js.min'

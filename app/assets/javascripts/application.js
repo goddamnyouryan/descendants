@@ -3,6 +3,7 @@
 //= require s3_direct_upload
 //= require jquery.validate.min
 //= require modernizr
+//= require video
 //= require turbolinks
 //= require underscore
 //= require backbone
