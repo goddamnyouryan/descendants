@@ -6,7 +6,7 @@ body#preview {
     @include sans-bold(72px);
     letter-spacing: 5px;
     text-align: center;
-    margin: 50px 0;
+    margin: $spacing 0;
 
     @include media(400px) {
       @include sans-bold(30px);

@@ -1,0 +1,17 @@
+section#directors {
+  background: $text;
+  color: $background;
+  display: none;
+
+  .container {
+    margin: 0px auto;
+    padding: 0 0 $spacing 0;
+  }
+
+  h1 {
+    margin: 0;
+    padding: $spacing 0;
+  }
+
+  a { color: $background; }
+}
