@@ -18,6 +18,6 @@ class DirectorsController < ApplicationController
   end
 
   def render_preview?
-    render layout: 'preview', action: :preview if ENV['PREVIEW_PAGE']
+    render layout: 'preview', action: :preview if ENV['PREVIEW_PAGE'] && !params[:beta]
   end
 end
