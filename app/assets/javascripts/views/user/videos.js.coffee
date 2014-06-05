@@ -14,3 +14,4 @@ class Descendants.Views.Videos extends Backbone.View
         @overlay = new Descendants.Views.Overlay el: 'body', content: @template(video: @video)
         @overlay.render()
         videojs @video.get('slug'), {}, ->
+          this.play()
