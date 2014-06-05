@@ -7,6 +7,8 @@ class Video < ActiveRecord::Base
 
   validates :director_id, :title, :client, presence: true
 
+  default_scope { order('position ASC') }
+
   def slug_candidates
     [
       [:client, :title]

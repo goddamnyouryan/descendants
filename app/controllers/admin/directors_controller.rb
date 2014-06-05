@@ -32,6 +32,14 @@ class Admin::DirectorsController < Admin::BaseController
     redirect_to directors_url, notice: "#{@director.name} was successfully deleted."
   end
 
+  def sort
+    params[:director].each_with_index do |id, index|
+      Director.where(id: id).update_all position: index + 1
+    end
+
+    render nothing: true
+  end
+
   private
 
   def director_params

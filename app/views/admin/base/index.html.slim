@@ -1,5 +1,5 @@
-h2 Directors
-ul
+h2 Directors (Drag to Reorder)
+= sortable_list sort_admin_directors_path do
   - @directors.each do |director|
     = content_tag_for :li, director do
       h3 = link_to director.name, director

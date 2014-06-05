@@ -33,6 +33,14 @@ class Admin::VideosController < Admin::BaseController
     redirect_to edit_admin_director_path(@director), notice: "#{@video.title} deleted."
   end
 
+  def sort
+    params[:video].each_with_index do |id, index|
+      Video.where(id: id).update_all position: index + 1
+    end
+
+    render nothing: true
+  end
+
   private
 
   def video_params

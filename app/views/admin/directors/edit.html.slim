@@ -6,12 +6,12 @@ nav
 
 == render 'form'
 
-h2 Videos
+h2 Video (Drag to Reorder)
 nav
   ul
     li = link_to 'New Video', new_admin_director_video_path(@director)
 
-ul
+= sortable_list sort_admin_director_videos_path(@director) do
   - @videos.each do |video|
     = content_tag_for :li, video do
       h3 = video.title

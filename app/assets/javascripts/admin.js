@@ -1,8 +1,8 @@
 //= require jquery
 //= require jquery_ujs
-//= require jquery.validate.min
+//= require jquery.ui.sortable
+//= require s3_direct_upload
 //= require modernizr
-//= require video
 //= require turbolinks
 //= require underscore
 //= require backbone

@@ -13,4 +13,11 @@ module ApplicationHelper
     content = content_for?(:hero) ? content_for(:hero) : Filler::Image.new(width: 1900, height: 1182).url
     image_tag content
   end
+
+  def sortable_list(path, &block)
+    options = { class: 'sortable', 'data-sort-url' => path }
+    content_tag :ul, options do
+      yield
+    end
+  end
 end
