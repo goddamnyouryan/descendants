@@ -15,7 +15,7 @@ html
           - @directors.each do |director|
             = content_tag_for :li, director do
               = link_to director do
-                = image_tag director.image
+                = image_tag director.image(:thumb)
                 h2 = director.name
 
     section#hero

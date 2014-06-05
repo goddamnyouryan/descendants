@@ -32,7 +32,7 @@ class Video < ActiveRecord::Base
     if medium
       medium.attachment(style)
     else
-      Filler::Image.new(width: 285, height: 160).url
+      Filler::Image.new(style).url
     end
   end
 

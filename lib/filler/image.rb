@@ -1,9 +1,11 @@
 module Filler
   class Image
 
-    def initialize(options)
-      @height = options[:height]
-      @width = options[:width]
+    def initialize(style)
+      @style = style
+      dimensions = IMAGES[style].split /x|#/
+      @width = dimensions[0]
+      @height = dimensions[1]
     end
 
     def url

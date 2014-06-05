@@ -3,7 +3,7 @@ Paperclip::Attachment.default_options.merge!(
   path: ':class/:attachment/:id/:style/:filename',
   storage: :s3,
   s3_credentials: Rails.configuration.aws,
-  styles: { thumb: '285x160#', poster: '896x504#' }
+  styles: IMAGES
 )
 
 if Rails.env.production?

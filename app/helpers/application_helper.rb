@@ -10,7 +10,7 @@ module ApplicationHelper
   end
 
   def hero_image
-    content = content_for?(:hero) ? content_for(:hero) : Filler::Image.new(width: 1900, height: 1182).url
+    content = content_for?(:hero) ? content_for(:hero) : Filler::Image.new(:hero).url
     image_tag content
   end
 
