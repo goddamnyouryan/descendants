@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :videos, only: :show
+    resources :directors, only: :show
   end
 
   root 'directors#index'

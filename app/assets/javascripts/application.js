@@ -6,6 +6,7 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
+//= require backbone-associations-min
 //= require descendants
 //= require_tree ../templates
 //= require_tree ./models

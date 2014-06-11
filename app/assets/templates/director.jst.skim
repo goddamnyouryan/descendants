@@ -1,0 +1,12 @@
+section#hero
+  img src="#{@featured.get('hero')}"
+  .hero-title
+    h1 = @director.get('name')
+    h2 = @featured.get('client')
+ul.videos
+  - _.each @videos, (video) =>
+    li.video data-slug="#{video.get('slug')}" id="video_#{video.get('id')}"
+      a href="/directors/#{@director.get('slug')}"
+        img src="#{video.get('thumb')}"
+        h2 = video.get('title')
+        h3 = video.get('client')

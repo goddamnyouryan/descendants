@@ -9,6 +9,7 @@ class Descendants.Routers.Application extends Backbone.Router
 
   home: ->
     new Descendants.Views.Videos
+    new Descendants.Views.Director el: 'body'
 
   directorsShow: (slug) ->
     new Descendants.Views.Videos

@@ -11,7 +11,7 @@ html
     section#directors
       ul
         - @directors.each do |director|
-          li = link_to director.name, director
+          li = link_to director.name, director, 'data-slug' => director.slug
 
     .container
       header
@@ -21,11 +21,11 @@ html
             li = link_to 'Feed'
             li = link_to 'Contact'
 
-      section#hero
-        = hero_image
-        = hero_title
-
       section#content
+        section#hero
+          = hero_image
+          = hero_title
+
         = yield
 
       footer

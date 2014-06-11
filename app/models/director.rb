@@ -16,4 +16,8 @@ class Director < ActiveRecord::Base
     medium = Medium.where(video_id: videos.map(&:id), type: 'image')
     medium.present? ? medium.sample.attachment(style) : Filler::Image.new(style).url
   end
+
+  def featured
+    videos.sample
+  end
 end
