@@ -1,14 +1,6 @@
 header {
   @include clearfix;
-  position: absolute;
-  width: 100%;
-  padding: $spacing;
-  box-sizing: border-box;
-
-  @include media(600px) {
-    padding: 25px;
-    font-size: 14px;
-  }
+  padding: 0 0 50px 0;
 
   h1 {
     @include sans-bold(18px);
@@ -19,8 +11,17 @@ header {
   nav {
     @include float-right;
 
-    a {
-      @include button;
+    ul {
+      @include clearfix;
+    }
+
+    li {
+      @include float-left;
+      margin-right: 25px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
   }
 }

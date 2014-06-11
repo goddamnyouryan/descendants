@@ -1,1 +1,1 @@
-IMAGES = { thumb: '285x160#', poster: '896x504#', hero: '1900x1182#' }
+IMAGES = { thumb: '245x138#', poster: '896x504#', hero: '980x500#' }

@@ -8,23 +8,19 @@ html
     = csrf_meta_tags
 
   body
-    section#directors
-      .container
-        h1 Directors
-        ul.directors
-          - @directors.each do |director|
-            = content_tag_for :li, director do
-              = link_to director do
-                = image_tag director.image(:thumb)
-                h2 = director.name
-
-    section#hero
-      header
-        h1 = link_to 'Descendants', root_path, class: 'light'
-        nav
-          h2 = link_to 'Directors', root_path, class: 'light'
-      = hero_image
-      = hero_title
-
     .container
-      = yield
+      header
+        h1 = link_to 'Descendants', root_path
+        nav
+          ul
+            li = link_to 'Feed'
+            li = link_to 'Contact'
+
+      section#hero
+        = hero_image
+        = hero_title
+
+      section#content
+        = yield
+
+      footer
