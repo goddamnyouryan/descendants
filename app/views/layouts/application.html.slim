@@ -8,6 +8,11 @@ html
     = csrf_meta_tags
 
   body
+    section#directors
+      ul
+        - @directors.each do |director|
+          li = link_to director.name, director
+
     .container
       header
         h1 = link_to 'Descendants', root_path
