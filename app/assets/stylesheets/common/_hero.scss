@@ -2,6 +2,7 @@ section#hero {
   max-height: 40rem;
   overflow: hidden;
   position: relative;
+  margin: 0 0 $spacing 0;
 
   img {
     max-width: 100%;
@@ -20,9 +21,9 @@ section#hero {
     color: $text;
     letter-spacing: 5px;
 
+
     h1 {
       @include sans-bold(72px);
-      text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
       margin: 0;
 
       @include media(600px) {
@@ -32,6 +33,20 @@ section#hero {
       @include media(400px) {
         @include sans-bold(32px);
       }
+    }
+
+    h2 {
+     @include sans-bold(36px);
+    }
+
+    h1, h2 {
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    }
+  }
+
+  &:hover .hero-title {
+    h1, h2 {
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.2), 0px 0px 15px rgba(255, 255, 190, .75);
     }
   }
 }
