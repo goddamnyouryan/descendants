@@ -8,11 +8,9 @@ class Descendants.Routers.Application extends Backbone.Router
     'admin/directors/:director/videos/:video/edit': 'videoForm'
 
   home: ->
-    new Descendants.Views.Directors el: 'body'
     new Descendants.Views.Videos
 
   directorsShow: (slug) ->
-    new Descendants.Views.Directors el: 'body'
     new Descendants.Views.Videos
 
   adminBase: ->
