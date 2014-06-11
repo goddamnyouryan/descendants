@@ -1,22 +1,18 @@
 header {
-  @include clearfix;
   padding: 0 0 50px 0;
+  text-align: center;
 
   h1 {
-    @include sans-bold(18px);
-    @include float-left;
-    margin: 0;
+    @include sans-bold(36px);
   }
 
   nav {
-    @include float-right;
 
     ul {
-      @include clearfix;
     }
 
     li {
-      @include float-left;
+      display: inline-block;
       margin-right: 25px;
 
       &:last-of-type {
