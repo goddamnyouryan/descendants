@@ -18,7 +18,5 @@ Rails.application.routes.draw do
     resources :videos, only: :show
   end
 
-  post 'contact', to: 'contact_form#create'
-
   root 'directors#index'
 end
