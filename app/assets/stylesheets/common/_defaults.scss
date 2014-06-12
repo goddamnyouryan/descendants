@@ -34,6 +34,7 @@ h1 {
 }
 
 p {
-  line-height: 42px;
   text-transform: none;
+
+  &.about { line-height: 42px; }
 }

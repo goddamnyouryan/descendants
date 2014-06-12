@@ -1,4 +1,45 @@
 = content_for :header  do
   script src="https://maps.googleapis.com/maps/api/js?key=#{ENV['DESCENDANTS_GOOGLE_MAPS_API_KEY']}&sensor=false&extension=.js"
-div#la.map
-div#toronto.map
+#maps
+  .location
+    div#la.map
+    .info
+      h3 Los Angeles
+      p
+        ' 1151 N. Highland Ave
+        br
+        ' Suite 201
+        br
+         ' Los Angeles, CA 90038
+      h4 Executive Producer
+      p
+        ' Liane Thomas
+        br
+        = link_to 'liane@descendants.tv', 'mailto:liane@descendants.tv'
+
+  .location
+    div#toronto.map
+    .info
+      h3 Toronto
+      p
+        ' 439 Wellington Street
+        br
+        ' Second Floor
+        br
+         ' Toronto, ON M5V 1E7
+      h4 Executive Producer
+      p
+        ' Tasha Litt
+        br
+        = link_to 'tasha@descendants.tv', 'mailto:tasha@descendants.tv'
+
+#principals
+  h2 Principals
+
+  h3 Partner
+  h4 Dan Ford
+
+  h3 Partner / Creative Mentor
+  h4 Mark Zibert
+
+  p For general inquiries email #{link_to 'hello@descendants.tv', 'mailto:hello@descendants.tv'}
