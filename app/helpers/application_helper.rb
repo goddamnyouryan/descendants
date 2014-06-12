@@ -4,14 +4,17 @@ module ApplicationHelper
   end
 
   def hero_title
-    content_tag :div, class: 'hero-title' do
-      content_for(:hero_title) || content_tag(:h1) { 'Descendants' }
+    if content_for?(:hero_title)
+      content_tag :div, class: 'hero-title' do
+        content_for(:hero_title)
+      end
     end
   end
 
   def hero_image
-    content = content_for?(:hero) ? content_for(:hero) : Filler::Image.new(:hero).url
-    image_tag content
+    if content_for?(:hero)
+      image_tag content_for(:hero)
+    end
   end
 
   def sortable_list(path, &block)

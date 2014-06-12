@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   resources :directors, only: [:index, :show]
 
+  %w(contact feed).each do |page|
+    get page, controller: :pages, action: page
+  end
+
   namespace :admin do
     resources :directors, except: [:index, :show] do
       resources :videos, except: [:index, :show] do

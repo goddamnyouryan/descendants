@@ -12,10 +12,6 @@ class DirectorsController < ApplicationController
 
   private
 
-  def set_directors
-    @directors = Director.includes(:videos).all
-  end
-
   def render_preview?
     render layout: 'preview', action: :preview if ENV['PREVIEW_PAGE'] && !params[:beta]
   end

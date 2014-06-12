@@ -16,4 +16,8 @@ class ApplicationController < ActionController::Base
   def video_id
     params[:video_id] || params[:id]
   end
+
+  def set_directors
+    @directors = Director.all
+  end
 end

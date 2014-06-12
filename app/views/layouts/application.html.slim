@@ -18,8 +18,8 @@ html
         h1 = link_to 'Descendants', root_path
         nav
           ul
-            li = link_to 'Feed'
-            li = link_to 'Contact'
+            li = link_to 'Feed', feed_path
+            li = link_to 'Contact', contact_path
 
       section#content
         section#hero
@@ -29,3 +29,4 @@ html
         = yield
 
       footer
+      = yield(:header)
