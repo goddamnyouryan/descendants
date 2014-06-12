@@ -11,7 +11,6 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'backbone-on-rails'
 gem 'skim'
-gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'slim-rails'
 gem 'spring', group: :development

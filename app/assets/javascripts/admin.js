@@ -3,7 +3,6 @@
 //= require jquery.ui.sortable
 //= require s3_direct_upload
 //= require modernizr
-//= require turbolinks
 //= require underscore
 //= require backbone
 //= require descendants
