@@ -1,6 +1,6 @@
 body#preview {
-  background: $text;
-  color: $background;
+  background: $background;
+  color: $text;
 
   h1 {
     @include sans-bold(72px);
