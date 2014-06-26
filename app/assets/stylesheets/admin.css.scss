@@ -3,5 +3,8 @@
 $sprite-map: sprite-map('map/*.png', $spacing: 10px);
 @import 's3_direct_upload_progress_bars';
 @import 'mixins/*';
+$old-text: $text;
+$text: $background;
+$background: $old-text;
 @import 'common/*';
 @import 'admin/*';
