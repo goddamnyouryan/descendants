@@ -8,25 +8,17 @@ html
     = csrf_meta_tags
 
   body
-    section#directors
+    = render 'shared/header'
+    section#hero
+      = hero_image
+      = hero_title
       ul
         - @directors.each do |director|
           li = link_to director.name, director, 'data-slug' => director.slug
 
     .container
-      header
-        h1 = link_to 'Descendants', root_path
-        nav
-          ul
-            li = link_to 'Feed', feed_path
-            li = link_to 'Contact', contact_path
-
-      section#content
-        section#hero
-          = hero_image
-          = hero_title
-
-        = yield
+      = yield
 
       footer
-      = yield(:header)
+
+    = yield(:header)

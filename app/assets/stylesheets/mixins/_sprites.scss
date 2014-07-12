@@ -3,6 +3,7 @@
   @include sprite-dimensions($map, $icon);
   background: sprite($map, $icon) no-repeat;
   text-indent: -9999px;
+  display: block;
 
   @if $hover {
     &:hover {

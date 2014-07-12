@@ -1,23 +1,48 @@
 header {
-  padding: 0 0 50px 0;
+  @include clearfix;
   text-align: center;
+  padding: 17px 0;
 
   h1 {
-    @include sans-bold(36px);
+    @include sprite-background(logo);
+    display: inline-block;
+    margin: 14px 0 0 0;
   }
 
   nav {
+    @include float-left;
+    text-align: left;
+    margin: 20px 0 0 0;
+
+    span {
+      @include sprite-background(menu);
+    }
 
     ul {
+      position: absolute;
+      z-index: 3;
+      top: 90px;
     }
 
     li {
-      display: inline-block;
-      margin-right: 25px;
 
-      &:last-of-type {
-        margin-right: 0;
-      }
     }
+  }
+
+  ul#social {
+    @include float-right;
+    @include clearfix;
+    margin: 19px 0 0 0;
+
+    li {
+      @include float-left;
+      margin: 0 10px 0 0;
+
+      &:last-of-type { margin: 0; }
+    }
+
+    #twitter { @include sprite-background(twitter); }
+    #facebook { @include sprite-background(facebook); }
+    #instagram { @include sprite-background(instagram); }
   }
 }

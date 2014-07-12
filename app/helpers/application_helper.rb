@@ -23,4 +23,8 @@ module ApplicationHelper
       yield
     end
   end
+
+  def social_link_to(name, url)
+    link_to name, url, target: '_blank', id: name.downcase
+  end
 end
