@@ -1,6 +1,6 @@
 class DirectorsController < ApplicationController
   before_action :set_director, only: :show
-  before_action :set_directors
+  before_action :set_directors, only: :index
   before_action :render_preview?, only: :index
 
   def index

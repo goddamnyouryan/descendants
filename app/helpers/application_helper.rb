@@ -3,17 +3,11 @@ module ApplicationHelper
     { method: :delete, data: { confirm: "Are you sure you want to delete #{name}?" } }
   end
 
-  def hero_title
-    if content_for?(:hero_title)
-      content_tag :div, class: 'hero-title' do
-        content_for(:hero_title)
-      end
-    end
-  end
-
-  def hero_image
+  def hero
     if content_for?(:hero)
-      image_tag content_for(:hero)
+      content_tag :section, id: 'hero' do
+        content_for(:hero)
+      end
     end
   end
 
