@@ -1,7 +1,10 @@
 = content_for :hero do
-  = image_tag @directors.sample.featured.thumb(:hero)
-  ul
+  #slideshow
     - @directors.each do |director|
-      li = link_to director.name, director, 'data-slug' => director.slug
+      = image_tag director.featured.thumb(:hero), id: director.slug
+    nav
+      ul
+        - @directors.each do |director|
+          li = link_to director.name, director, 'data-slug' => director.slug, id: director.slug
 
 p.about Direct trade dreamcatcher 3 wolf moon, ethical jean shorts crucifix vegan kogi semiotics PBR cray tattooed street art post-ironic iPhone. Gentrify banjo seitan Echo Park, Blue Bottle post-ironic sartorial Cosby sweater deep v. Narwhal shabby chic beard wayfarers meggings, Cosby sweater chillwave. Vegan tote bag Odd Future dreamcatcher distillery chillwave. Cray asymmetrical mlkshk, PBR&B cred chillwave Etsy brunch whatever.

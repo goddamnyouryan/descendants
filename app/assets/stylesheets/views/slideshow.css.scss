@@ -1,0 +1,30 @@
+#slideshow {
+  position: relative;
+
+  img {
+    display: none;
+  }
+
+  nav {
+    @include centered(auto);
+    font-size: 28px;
+  }
+
+  ul {
+    display: inline-block;
+    text-align: center;
+  }
+
+  li {
+    margin: 0 0 35px 0;
+  }
+
+  a {
+    letter-spacing: 2px;
+
+    &:hover {
+      color: $text;
+      border-bottom: 2px solid $text;
+    }
+  }
+}

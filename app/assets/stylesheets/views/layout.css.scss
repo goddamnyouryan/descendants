@@ -4,9 +4,12 @@ header {
   padding: 17px 0;
 
   h1 {
-    @include sprite-background(logo);
     display: inline-block;
-    margin: 14px 0 0 0;
+
+    a {
+      @include sprite-background(logo);
+      margin: 14px 0 0 0;
+    }
   }
 
   nav {

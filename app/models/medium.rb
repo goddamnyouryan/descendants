@@ -13,6 +13,8 @@ class Medium < ActiveRecord::Base
 
   after_create :transfer_and_cleanup
 
+  scope :images, -> { where(type: 'image') }
+
   def post_process_required?
     %r{^(image|(x-)?application)/(bmp|gif|jpeg|jpg|pjpeg|png|x-png)$}.match(attachment_content_type).present?
   end
