@@ -5,6 +5,7 @@ header {
 
   h1 {
     display: inline-block;
+    text-align: center;
 
     a {
       @include sprite-background(logo);
@@ -59,5 +60,39 @@ header {
     #twitter { @include sprite-background(twitter); }
     #facebook { @include sprite-background(facebook); }
     #instagram { @include sprite-background(instagram); }
+  }
+}
+
+footer {
+  @include clearfix;
+  margin: 125px 0 0 0;
+  padding: 25px 0;
+  border-top: 1px solid $text;
+
+  .address {
+    @include float-left;
+    margin: 0 50px 0 0;
+
+    &:last-of-type { margin: 0; }
+
+    h3 {
+      margin: 0 0 10px 0;
+      padding: 0 0 10px 0;
+
+      &::first-letter { border-bottom: 1px solid $secondary; padding: 0 0 10px 0; }
+    }
+  }
+
+  h4 {
+    font-size: 10px;
+    line-height: 16px;
+    color: $secondary;
+
+    a { color: $secondary; }
+  }
+
+  h1 {
+    @include sprite-background(icon);
+    @include float-right;
   }
 }

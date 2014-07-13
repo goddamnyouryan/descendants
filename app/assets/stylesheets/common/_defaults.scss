@@ -29,12 +29,14 @@ a {
 
 h1 {
   @include sans-bold(36px);
-  text-align: center;
   margin: 0;
+}
+
+h3 {
+  @include sans(12px);
+  letter-spacing: 1px;
 }
 
 p {
   text-transform: none;
-
-  &.about { line-height: 42px; }
 }

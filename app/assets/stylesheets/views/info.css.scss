@@ -1,0 +1,21 @@
+.info {
+  @include clearfix;
+  margin: 15px 0 0 0;
+  padding: 45px 0 0 0;
+  border-top: 1px solid $text;
+}
+
+blockquote, p {
+  @include float-left;
+  width: 45%;
+  margin-right: 5%;
+}
+
+blockquote {
+  @include serif-bold(23px);
+}
+
+p {
+  @include serif(16px);
+  line-height: 26px;
+}
