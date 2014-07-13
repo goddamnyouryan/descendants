@@ -16,16 +16,28 @@ header {
 
     span {
       @include sprite-background(menu);
+      cursor: pointer;
+      position: absolute;
+      padding: 0 36px 36px 0;
     }
 
     ul {
+      @include _transition(opacity);
       position: absolute;
       z-index: 3;
       top: 90px;
+      padding: 15px 60px 15px 40px;
+      background: rgba($background, 0.5);
+      opacity: 0;
+      visibility: hidden;
     }
 
-    li {
+    span:hover + ul, ul:hover { visibility: visible; opacity: 1; }
 
+    li {
+      margin: 0 0 15px 0;
+
+      &:last-of-type { margin: 0; }
     }
   }
 
