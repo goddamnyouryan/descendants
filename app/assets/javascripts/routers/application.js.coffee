@@ -4,7 +4,6 @@ class Descendants.Routers.Application extends Backbone.Router
     '': 'home'
     'directors/:slug': 'directorsShow'
     'admin': 'adminBase'
-    'contact': 'contact'
     'admin/directors/:director/edit': 'directorForm'
     'admin/directors/:director/videos/:video/edit': 'videoForm'
 
@@ -15,9 +14,6 @@ class Descendants.Routers.Application extends Backbone.Router
 
   directorsShow: (slug) ->
     new Descendants.Views.Videos
-
-  contact: ->
-    new Descendants.Views.Map el: 'body'
 
   adminBase: ->
     new Descendants.Views.Sortable
