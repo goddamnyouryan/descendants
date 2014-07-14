@@ -1,13 +1,33 @@
-@mixin font-format($font, $font-size, $font-weight) {
-  font-family: $font, 'Helvetica', sans-serif;
+$fonts: 'BrownTT-Light', 'BrownTT-Regular', 'BrownTT-Bold', 'ChronicleDisp-Roman', 'ChronicleDisp-Bold';
+
+@each $font in $fonts {
+  @include font-face(
+    $font,
+    font-files(
+      '#{$font}.woff', woff,
+      '#{$font}.ttf', truetype,
+      '#{$font}.svg##{$font}', svg
+    ),
+    '#{$font}.eot',
+    normal,
+    normal
+  );
+}
+
+@mixin font-format($font, $font-size, $sans: true) {
+  @if $sans {
+    font-family: $font, 'Helvetica', Arial, sans-serif;
+  } @else {
+    font-family: $font, Georgia, serif;
+  }
   font-size: $font-size;
-  font-weight: $font-weight;
   line-height: $font-size * 1.3;
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
-@mixin sans($font-size) { @include font-format('Lato', $font-size, 400); }
-@mixin sans-bold($font-size) { @include font-format('Lato', $font-size, 700); }
-@mixin serif($font-size) { @include font-format('PT Serif', $font-size, 400); }
-@mixin serif-bold($font-size) { @include font-format('PT Serif', $font-size, 700); }
+@mixin sans-light($font-size) { @include font-format(nth($fonts, 1), $font-size); }
+@mixin sans($font-size) { @include font-format(nth($fonts, 2), $font-size); }
+@mixin sans-bold($font-size) { @include font-format(nth($fonts, 3), $font-size); }
+@mixin serif($font-size) { @include font-format(nth($fonts, 4), $font-size, true); }
+@mixin serif-bold($font-size) { @include font-format(nth($fonts, 5), $font-size, true); }

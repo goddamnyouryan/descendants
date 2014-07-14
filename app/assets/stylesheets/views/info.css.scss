@@ -13,6 +13,7 @@ blockquote, p {
 
 blockquote {
   @include serif-bold(23px);
+  letter-spacing: 1px;
 }
 
 p {
