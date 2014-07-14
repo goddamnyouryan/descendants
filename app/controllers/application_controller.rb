@@ -18,6 +18,6 @@ class ApplicationController < ActionController::Base
   end
 
   def set_directors
-    @directors = Director.all
+    @directors = Director.normal
   end
 end

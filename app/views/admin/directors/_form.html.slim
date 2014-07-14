@@ -6,7 +6,15 @@
     = f.text_field :name
 
   .form-field
-    = f.label :bio
+    = f.label :headline, 'Headline (appears on the left in big letters)'
+    = f.text_area :headline
+
+  .form-field
+    = f.label :bio, 'Bio (appears on the right in small letters)'
     = f.text_area :bio
+
+  .form-field
+    = f.check_box :joinery
+    = f.label :joinery, 'Show this director on the joinery? (Otherwise it will show up on the homepage)'
 
   = f.submit 'Save'

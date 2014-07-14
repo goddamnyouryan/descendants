@@ -7,6 +7,8 @@ class Director < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
 
   default_scope { order('position ASC') }
+  scope :joinery, -> { where(joinery: true) }
+  scope :normal, -> { where(joinery: false) }
 
   def should_generate_new_friendly_id?
     name_changed?

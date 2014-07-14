@@ -10,6 +10,8 @@ label {
   display: block;
 }
 
+input[type=checkbox] + label { display: inline; }
+
 input[type=text], textarea {
   @include sans(12px);
   background: lighten($background, 5%);
