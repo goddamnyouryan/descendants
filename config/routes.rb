@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :directors, only: [:index, :show]
 
-  %w(contact feed).each do |page|
+  %w(feed).each do |page|
     get page, controller: :pages, action: page
   end
 
