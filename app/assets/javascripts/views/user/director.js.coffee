@@ -12,13 +12,17 @@ class Descendants.Views.Director extends Backbone.View
     @director = new Descendants.Models.Director slug: slug
     @director.fetch
       success: =>
-        @content().fadeOut 400, =>
-          @featured = @director.get('featured')
-          @content().html(@template
-                          director: @director
-                          videos: @director.get('videos').models
-                          featured: @featured)
-                        .fadeIn()
-          videojs @featured.get('slug'), {}, ->
+        new Descendants.Views.Videos director: @director
+        @featured = @director.get('featured')
+        @showVideo @featured
       failure: ->
         alert 'Something went wrong.'
+
+  showVideo: (video) ->
+    @content().fadeOut 400, =>
+      @content().html(@template
+                      director: @director
+                      videos: @director.get('videos').models
+                      featured: video)
+                    .fadeIn()
+      videojs @featured.get('slug'), {}, ->

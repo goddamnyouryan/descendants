@@ -1,17 +1,27 @@
 class Descendants.Views.Videos extends Backbone.View
-  el: 'ul.videos'
+  el: 'body'
 
-  template: JST['video_player']
+  player: -> @$('.video-js')
+  title: -> @$('div.title')
+
+  videoPlayer: JST['partials/_video_player']
+  videoInfo: JST['partials/_video_info']
+
+  initialize: (options) ->
+    @director = options.director
 
   events: ->
-    'click li': 'openOverlay'
+    'click ul.videos a': 'loadVideo'
 
-  openOverlay: (event) ->
+  loadVideo: (event) ->
     event.preventDefault()
     @video = new Descendants.Models.Video slug: $(event.target).parents('li').data('slug')
     @video.fetch
       success: =>
-        @overlay = new Descendants.Views.Overlay el: 'body', content: @template(video: @video)
-        @overlay.render()
+        @loadContent @player(), @videoPlayer(video: @video)
+        @loadContent @title(), @videoInfo(video: @video, director: @director)
         videojs @video.get('slug'), {}, ->
-          this.play()
+
+  loadContent: (element, content) ->
+    element.fadeOut 400, =>
+      element.replaceWith(content).fadeIn()

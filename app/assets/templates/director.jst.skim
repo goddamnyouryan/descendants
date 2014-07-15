@@ -2,7 +2,7 @@ section#hero
  == Descendants.Helpers.renderPartial 'video_player', video: @featured
 
 .container
-  h3 = @director.get('name')
+  == Descendants.Helpers.renderPartial 'video_info', video: @featured, director: @director
   .info
     ul.videos
       - _.each @videos, (video) =>
