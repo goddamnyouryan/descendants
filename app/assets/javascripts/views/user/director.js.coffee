@@ -1,15 +1,14 @@
 class Descendants.Views.Director extends Backbone.View
+  el: 'body'
 
   content: -> @$('section#content')
   template: JST['director']
 
-  events: ->
-    'click ul#directors a': 'loadDirector'
+  initialize: (options) ->
+    @slug = options.slug
 
-  loadDirector: (event) ->
-    event.preventDefault()
-    slug = $(event.target).data('slug')
-    @director = new Descendants.Models.Director slug: slug
+  render: ->
+    @director = new Descendants.Models.Director slug: @slug
     @director.fetch
       success: =>
         new Descendants.Views.Videos director: @director
