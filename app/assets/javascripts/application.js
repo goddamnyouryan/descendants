@@ -7,6 +7,7 @@
 //= require backbone
 //= require backbone-associations-min
 //= require descendants
+//= require_tree ./helpers
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

@@ -1,9 +1,9 @@
 json.(@director, :id, :slug, :name)
+
 json.featured do
-  json.(@featured, :id, :slug, :title, :client)
-  json.hero @featured.thumb(:hero)
+  json.partial! 'api/videos/video', video: @featured
 end
+
 json.videos @videos do |video|
-  json.(video, :id, :slug, :title, :client)
-  json.thumb video.thumb
+  json.partial! 'api/videos/video', video: video
 end

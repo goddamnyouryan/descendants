@@ -9,8 +9,10 @@ html
 
   body
     = render 'shared/header'
-    = hero
+    section#content
+      = hero
+      .container
+        = yield
     .container
-      = yield
       = render 'shared/footer'
     = yield(:header)

@@ -4,7 +4,7 @@ class Descendants.Views.Director extends Backbone.View
   template: JST['director']
 
   events: ->
-    'click section#directors a': 'loadDirector'
+    'click ul#directors a': 'loadDirector'
 
   loadDirector: (event) ->
     event.preventDefault()
@@ -13,10 +13,12 @@ class Descendants.Views.Director extends Backbone.View
     @director.fetch
       success: =>
         @content().fadeOut 400, =>
+          @featured = @director.get('featured')
           @content().html(@template
                           director: @director
                           videos: @director.get('videos').models
-                          featured: @director.get('featured'))
+                          featured: @featured)
                         .fadeIn()
+          videojs @featured.get('slug'), {}, ->
       failure: ->
         alert 'Something went wrong.'

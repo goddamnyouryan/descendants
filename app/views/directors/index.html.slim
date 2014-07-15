@@ -3,7 +3,7 @@
     - @directors.each do |director|
       = image_tag director.featured.thumb(:hero), id: director.slug
     nav
-      ul
+      ul#directors
         - @directors.each do |director|
           li = link_to director.name, director, 'data-slug' => director.slug, id: director.slug
 

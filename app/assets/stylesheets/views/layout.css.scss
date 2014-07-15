@@ -92,7 +92,10 @@ footer {
   }
 
   h1 {
-    @include sprite-background(icon);
     @include float-right;
+
+    a {
+      @include sprite-background(icon);
+    }
   }
 }
