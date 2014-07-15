@@ -1,7 +1,13 @@
 header {
-  @include clearfix;
+  @include pie-clearfix;
   text-align: center;
   padding: 17px 0;
+  box-sizing: border-box;
+  height: $header-height;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 3;
 
   h1 {
     display: inline-block;
@@ -39,6 +45,7 @@ header {
     span:hover + ul, ul:hover { visibility: visible; opacity: 1; }
 
     li {
+      @include serif-bold(16px);
       margin: 0 0 15px 0;
 
       &:last-of-type { margin: 0; }
@@ -61,6 +68,10 @@ header {
     #facebook { @include sprite-background(facebook); }
     #instagram { @include sprite-background(instagram); }
   }
+}
+
+#content {
+  margin: $header-height 0 0 0;
 }
 
 footer {
