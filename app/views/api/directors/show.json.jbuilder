@@ -1,4 +1,4 @@
-json.(@director, :id, :slug, :name)
+json.(@director, :id, :slug, :name, :headline, :bio)
 
 json.featured do
   json.partial! 'api/videos/video', video: @featured

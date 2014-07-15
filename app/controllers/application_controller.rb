@@ -18,6 +18,6 @@ class ApplicationController < ActionController::Base
   end
 
   def set_directors
-    @directors = Director.normal.joins(:videos)
+    @directors = Director.normal.includes(:videos).joins(:videos).uniq
   end
 end

@@ -6,7 +6,7 @@ class Director < ActiveRecord::Base
 
   validates :name, presence: true, uniqueness: true
 
-  default_scope { order('position ASC') }
+  default_scope { order('directors.position ASC') }
   scope :joinery, -> { where(joinery: true) }
   scope :normal, -> { where(joinery: false) }
 

@@ -1,9 +1,17 @@
 section#hero
  == Descendants.Helpers.renderPartial 'video_player', video: @featured
-ul.videos
-  - _.each @videos, (video) =>
-    li.video data-slug="#{video.get('slug')}" id="video_#{video.get('id')}"
-      a href="/directors/#{@director.get('slug')}"
-        img src="#{video.get('thumb')}"
-        h2 = video.get('title')
-        h3 = video.get('client')
+
+.container
+  h3 = @director.get('name')
+  .info
+    ul.videos
+      - _.each @videos, (video) =>
+        li.video data-slug="#{video.get('slug')}" id="video_#{video.get('id')}"
+          a href="/directors/#{@director.get('slug')}"
+            img src="#{video.get('thumb')}"
+            .meta
+              h2 = video.get('title')
+              h3 = video.get('client')
+
+    blockquote = @director.get('headline')
+    p = @director.get('bio')
