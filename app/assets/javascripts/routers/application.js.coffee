@@ -8,6 +8,9 @@ class Descendants.Routers.Application extends Backbone.Router
     'admin/directors/:director/edit': 'directorForm'
     'admin/directors/:director/videos/:video/edit': 'videoForm'
 
+  initialize: ->
+    new Descendants.Views.Scroll
+
   home: ->
     new Descendants.Views.Home el: 'body'
     new Descendants.Views.Slideshow el: 'div#slideshow'

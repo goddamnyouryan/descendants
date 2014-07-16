@@ -5,9 +5,9 @@ header
       ul
         li = link_to 'Directors', root_path
         li = link_to 'The Joinery', the_joinery_path
-        li = link_to 'About', '#'
+        li = link_to 'About', '#', class: 'scroll', 'data-scroll' => '#info'
         li = link_to 'News', feed_path
-        li = link_to 'Contact', '#'
+        li = link_to 'Contact', '#', class: 'scroll', 'data-scroll' => 'footer'
     h1 = link_to 'Descendants', root_path
     ul#social
       li = social_link_to 'Twitter', 'https://twitter.com/descendants_tv'
