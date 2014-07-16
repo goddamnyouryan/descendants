@@ -5,7 +5,7 @@ class Video < ActiveRecord::Base
   belongs_to :director
   has_many :media
 
-  validates :director_id, :title, :client, presence: true
+  validates :director_id, :title, presence: true
 
   default_scope { order('position ASC') }
 
