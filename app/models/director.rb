@@ -20,6 +20,6 @@ class Director < ActiveRecord::Base
   end
 
   def featured
-    videos.sample
+    videos.first
   end
 end
