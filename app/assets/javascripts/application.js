@@ -1,6 +1,5 @@
 //= require jquery
 //= require jquery_ujs
-//= require jquery.validate.min
 //= require modernizr
 //= require video
 //= require underscore
