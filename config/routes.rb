@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   resources :directors, only: [:index, :show]
 
-  %w(feed).each do |page|
-    get page, controller: :pages, action: page
+  %w(feed the-joinery).each do |page|
+    get page, controller: :pages, action: page.underscore
   end
 
   namespace :admin do

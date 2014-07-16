@@ -76,7 +76,7 @@ header {
 
 footer {
   @include clearfix;
-  margin: 125px 0 0 0;
+  margin: $big-space 0 0 0;
   padding: 25px 0;
   border-top: 1px solid $text;
 
