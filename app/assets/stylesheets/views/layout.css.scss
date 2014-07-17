@@ -1,5 +1,6 @@
 header {
   @include pie-clearfix;
+  background: rgba($background, 0.3);
   text-align: center;
   padding: 17px 0;
   box-sizing: border-box;

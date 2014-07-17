@@ -1,6 +1,7 @@
 body {
   @include sans(18px);
-  background: $background;
+  background: image-url('bg.jpg') no-repeat fixed $background;
+  background-size: cover;
   color: $text;
   text-transform: uppercase;
 }
