@@ -2,7 +2,6 @@
   h2 = @director.get('name')
 
   .meta
-    = console.log @video
     h3 = @video.get('title')
     - @client = @video.get('client')
     - if @client
