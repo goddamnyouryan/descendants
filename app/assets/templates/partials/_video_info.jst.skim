@@ -2,15 +2,16 @@
   h2 = @director.get('name')
 
   .meta
+    = console.log @video
     h3 = @video.get('title')
     - @client = @video.get('client')
-    - if @client?
+    - if @client
       h4
         ' Client:
         span = @client
 
     - @agency = @video.get('agency')
-    - if @agency?
+    - if @agency
       h4
         ' Agency:
         span = @agency
