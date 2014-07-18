@@ -1,3 +1,16 @@
+@include keyframes(twinkle) {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+#twinkle {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background: image-url('twinkle.png') repeat top center;
+  @include animate(twinkle);
+}
+
 header {
   @include pie-clearfix;
   background: rgba($background, 0.3);
@@ -99,7 +112,7 @@ header {
 
 #content {
   margin: $header-height 0 0 0;
-
+  position: relative;
   @include media($break-point) {
     margin: $header-mobile-height 0 0 0;
   }
@@ -110,6 +123,7 @@ footer {
   margin: $big-space 0 0 0;
   padding: 25px 0;
   border-top: 1px solid $text;
+  position: relative;
 
   .address {
     @include float-left;
