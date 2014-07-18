@@ -23,8 +23,8 @@
     letter-spacing: 2px;
 
     &:hover {
-      color: $text;
       border-bottom: 2px solid $text;
+      text-shadow: none;
     }
   }
 }
