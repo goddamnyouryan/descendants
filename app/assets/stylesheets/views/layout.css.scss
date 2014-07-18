@@ -10,6 +10,10 @@ header {
   width: 100%;
   z-index: 3;
 
+  @include media($break-point) {
+    height: $header-mobile-height;
+  }
+
   h1 {
     width: sprite-width(logo);
     margin: 0 auto;
@@ -17,6 +21,16 @@ header {
     a {
       @include sprite-background(logo);
       margin: 14px 0 0 0;
+    }
+
+    @include media($break-point) {
+      @include float-right;
+      width: sprite-width(logo-small);
+
+      a {
+        @include sprite-background(logo-small);
+        margin: 2px 0 0 0;
+      }
     }
   }
 
@@ -68,13 +82,27 @@ header {
     #twitter { @include sprite-background(twitter); }
     #facebook { @include sprite-background(facebook); }
     #instagram { @include sprite-background(instagram); }
+
+    @include media($break-point) {
+      display: none;
+    }
   }
 
-  nav, ul#social { margin: 7px 0 0 0; }
+  nav, ul#social {
+    margin: 7px 0 0 0;
+
+    @include media($break-point) {
+      margin: 0;
+    }
+  }
 }
 
 #content {
   margin: $header-height 0 0 0;
+
+  @include media($break-point) {
+    margin: $header-mobile-height 0 0 0;
+  }
 }
 
 footer {
@@ -95,6 +123,13 @@ footer {
 
       &::first-letter { border-bottom: 1px solid $secondary; padding: 0 0 10px 0; }
     }
+
+    @include media($break-point) {
+      @include cancel-float;
+      margin-bottom: 25px;
+
+      &:last-of-type { margin-bottom: 25px; }
+    }
   }
 
   h4 {
@@ -110,6 +145,10 @@ footer {
 
     a {
       @include sprite-background(icon);
+    }
+
+    @include media($break-point) {
+      @include cancel-float;
     }
   }
 }

@@ -13,6 +13,11 @@ ul.videos {
     img { vertical-align: bottom; }
 
     &:hover .meta { opacity: 1; }
+
+    @include media($break-point) {
+      @include cancel-float;
+      margin: 0 0 20px 0;
+    }
   }
 
   a:hover { color: $text; }

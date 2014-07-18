@@ -4,16 +4,28 @@
   h2 {
     @include float-left;
     @include serif-bold(24px);
+
+    @include media($break-point) {
+      @include cancel-float;
+    }
   }
 
   .meta {
     @include float-right;
     margin: 5px 0 0 0;
+
+    @include media($break-point) {
+      @include cancel-float;
+    }
   }
 
   h3, h4 {
     display: inline-block;
     margin: 0 0 0 10px;
+
+    @include media($break-point) {
+      margin: 0 10px 0 0;
+    }
   }
 
   h3 {
@@ -40,6 +52,12 @@ blockquote, p {
   @include float-left;
   width: 45%;
   margin-right: 5%;
+
+  @include media($break-point) {
+    @include cancel-float;
+    width: 90%;
+    margin: 0 5% 25px;
+  }
 }
 
 blockquote {
