@@ -25,3 +25,4 @@ class Descendants.Views.Videos extends Backbone.View
     element.fadeOut 400, =>
       element.replaceWith(content).fadeIn()
       videojs @video.get('slug'), {}, ->
+        this.play()
