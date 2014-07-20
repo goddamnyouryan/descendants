@@ -15,7 +15,7 @@ h2 Edit Video for #{@director.name}
 
 
 h2 Upload Media
-= s3_uploader_form callback_url: admin_director_video_media_path(@director, @video), id: 's3_uploader', callback_param: 'video[media]', expiration: 24.hours.from_now.utc.iso8601, max_file_size: 200.megabytes do
+= s3_uploader_form callback_url: admin_director_video_media_path(@director, @video), id: 's3_uploader', callback_param: 'video[media]', expiration: 24.hours.from_now.utc.iso8601, max_file_size: 400.megabytes do
   = file_field_tag :file, multiple: true
 
 = render 's3_template'
