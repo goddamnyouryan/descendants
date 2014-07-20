@@ -148,7 +148,11 @@ footer {
     line-height: 16px;
     color: $secondary;
 
-    a { color: $secondary; }
+    a {
+      color: $secondary;
+
+      &:hover { color: $text; text-shadow: none; }
+    }
   }
 
   h1 {
