@@ -1,0 +1,10 @@
+.vjs-big-play-button { display: none !important; }
+
+.video-js {
+  background-color: transparent !important;
+  vertical-align: top !important;
+
+  .vjs-tech {
+    height: auto !important;
+  }
+}
