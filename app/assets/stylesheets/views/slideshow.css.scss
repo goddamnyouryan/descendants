@@ -22,11 +22,12 @@
   }
 
   a {
+    @include text-shadow(lighten($background, 20%) 1px 1px 0);
     letter-spacing: 2px;
 
     &:hover, &.active {
+      @include text-shadow(lighten($background, 20%) 1px 1px 0);
       border-bottom: 2px solid $text;
-      text-shadow: none;
     }
   }
 }

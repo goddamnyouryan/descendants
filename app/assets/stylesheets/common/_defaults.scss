@@ -14,7 +14,7 @@ a {
   &.light { color: $background; }
 
   &:hover {
-    text-shadow: lighten($text, 5%) 0 0 1px;
+    @include text-shadow(lighten($text, 5%) 0 0 1px);
   }
 }
 
