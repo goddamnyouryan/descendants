@@ -1,16 +1,3 @@
-@include keyframes(twinkle) {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-#twinkle {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  left: 0; right: 0; top: 0; bottom: 0;
-  background: image-url('twinkle.png') repeat top center;
-  @include animate(twinkle);
-}
-
 header {
   @include pie-clearfix;
   background: rgba($background, 0.3);
