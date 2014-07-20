@@ -3,6 +3,8 @@
 
   img {
     display: none;
+
+    &.active { display: block; }
   }
 
   nav {
@@ -22,7 +24,7 @@
   a {
     letter-spacing: 2px;
 
-    &:hover {
+    &:hover, &.active {
       border-bottom: 2px solid $text;
       text-shadow: none;
     }
