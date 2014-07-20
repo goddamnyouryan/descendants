@@ -1,21 +1,37 @@
-@mixin sprite-background($icon, $hover: false) {
-  $map: $sprite-map;
-  @include sprite-dimensions($map, $icon);
-  background: sprite($map, $icon) no-repeat;
+$sprites: sprite-map('map/*.png', $spacing: 10px);
+$retina: sprite-map('retina/*.png', $spacing: 20px);
+
+@mixin sprite-background($icon, $something: false, $hover: false) {
+  @include sprite-dimensions($sprites, $icon);
+  background-repeat: no-repeat;
+  background-image: sprite-url($sprites);
+  background-position: sprite-position($sprites, $icon);
   text-indent: -9999px;
   display: block;
 
+  @if $something {
+  }
+
   @if $hover {
     &:hover {
-      background-position: sprite-position($map, "#{$icon}-hover")
+      background-position: sprite-position($sprites, "#{$icon}-hover")
     }
   }
 }
 
+@mixin retina-background($icon) {
+  @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 2) {
+    background-size: floor(image-width(sprite-path($retina)) / 2) floor(image-height(sprite-path($retina)) / 2);
+    background-image: sprite-url($retina);
+    $ypos: round(nth(sprite-position($retina, $icon), 2) / 2);
+    background-position: 0 $ypos;
+  }
+}
+
 @function sprite-width($sprite) {
-  @return image-width(sprite-file($sprite-map, $sprite));
+  @return image-width(sprite-file($sprites, $sprite));
 }
 
 @function sprite-height($sprite) {
-  @return image-height(sprite-file($sprite-map, $sprite));
+  @return image-height(sprite-file($sprites, $sprite));
 }

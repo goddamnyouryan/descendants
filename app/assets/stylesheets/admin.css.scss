@@ -1,6 +1,5 @@
 @import 'compass';
 @import 'compass/reset';
-$sprite-map: sprite-map('map/*.png', $spacing: 10px);
 @import 's3_direct_upload_progress_bars';
 @import 'mixins/*';
 $old-text: $text;

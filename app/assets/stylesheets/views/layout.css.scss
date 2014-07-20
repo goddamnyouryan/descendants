@@ -79,9 +79,19 @@ header {
       &:last-of-type { margin: 0; }
     }
 
-    #twitter { @include sprite-background(twitter); }
-    #facebook { @include sprite-background(facebook); }
-    #instagram { @include sprite-background(instagram); }
+    #twitter {
+      @include retina-background(twitter);
+      @include sprite-background(twitter);
+    }
+
+    #facebook {
+      @include retina-background(facebook);
+      @include sprite-background(facebook);
+    }
+    #instagram {
+      @include retina-background(instagram);
+      @include sprite-background(instagram);
+    }
 
     @include media($break-point) {
       display: none;
