@@ -21,4 +21,16 @@ module ApplicationHelper
   def social_link_to(name, url)
     link_to name, url, target: '_blank', id: name.downcase
   end
+
+  def feed_link(title, url)
+    content_tag :span, class: 'view' do
+      link_to "View on #{title}", url, target: '_blank'
+    end
+  end
+
+  def feed_image_tag(image, url)
+    link_to url, target: '_blank' do
+      image_tag image
+    end
+  end
 end
