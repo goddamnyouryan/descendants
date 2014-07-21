@@ -2,6 +2,7 @@
 //= require jquery_ujs
 //= require modernizr
 //= require video
+//= require masonry
 //= require underscore
 //= require backbone
 //= require backbone-associations-min

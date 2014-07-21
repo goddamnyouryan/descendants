@@ -33,6 +33,13 @@ h1 {
   margin: 0;
 }
 
+h2.title {
+  @include serif-bold(24px);
+  padding: 0 0 15px 0;
+  margin: 0 0 45px 0;
+  border-bottom: 1px solid $text;
+}
+
 h3 {
   @include sans(12px);
   letter-spacing: 1px;
