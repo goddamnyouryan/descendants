@@ -20,6 +20,7 @@ header {
 
     a {
       @include sprite-background(logo);
+      @include retina-background(logo);
       margin: 14px 0 0 0;
     }
 
@@ -42,6 +43,7 @@ header {
 
     span {
       @include sprite-background(menu);
+      @include retina-background(menu);
       cursor: pointer;
       position: absolute;
       padding: 0 36px 36px 0;

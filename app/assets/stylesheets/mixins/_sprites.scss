@@ -1,5 +1,5 @@
 $sprites: sprite-map('map/*.png', $spacing: 10px);
-$retina: sprite-map('retina/*.png', $spacing: 20px);
+$retina: sprite-map('retina/*.png', $spacing: 75px);
 
 @mixin sprite-background($icon, $hover: false) {
   @include sprite-dimensions($sprites, $icon);
