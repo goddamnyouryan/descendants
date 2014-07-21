@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140714143535) do
+ActiveRecord::Schema.define(version: 20140721213551) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 20140714143535) do
   add_index "directors", ["slug"], name: "index_directors_on_slug", unique: true, using: :btree
 
   create_table "media", force: true do |t|
-    t.integer  "video_id"
     t.string   "direct_upload_url"
     t.boolean  "processed"
     t.string   "type"
@@ -56,6 +55,8 @@ ActiveRecord::Schema.define(version: 20140714143535) do
     t.string   "attachment_content_type"
     t.integer  "attachment_file_size"
     t.datetime "attachment_updated_at"
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
   end
 
   create_table "videos", force: true do |t|

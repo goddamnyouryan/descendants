@@ -3,7 +3,7 @@ class Video < ActiveRecord::Base
   friendly_id :slug_candidates, use: :slugged
 
   belongs_to :director
-  has_many :media
+  has_many :media, as: :imageable
 
   validates :director_id, :title, presence: true
 

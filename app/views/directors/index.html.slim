@@ -2,7 +2,7 @@
   #slideshow
     #overlay
     - @directors.each do |director|
-      = image_tag director.featured.thumb(:hero), id: director.slug
+      = image_tag director.hero_image, id: director.slug
     = image_tag @joinery_featured.thumb(:hero), id: 'the-joinery'
     nav
       ul#directors

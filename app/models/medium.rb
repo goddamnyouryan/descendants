@@ -3,17 +3,21 @@ class Medium < ActiveRecord::Base
 
   DIRECT_UPLOAD_URL_FORMAT = %r{\Ahttps:\/\/s3\.amazonaws\.com\/descendants.#{Rails.env}/(?<path>uploads\/.+\/(?<filename>.+))\z}.freeze
 
-  belongs_to :video
+  belongs_to :imageable, polymorphic: true
 
   has_attached_file :attachment
   do_not_validate_attachment_file_type :attachment
 
-  validates :direct_upload_url, presence: true, format: { with: DIRECT_UPLOAD_URL_FORMAT }
-  validates :video_id, presence: true
+  validates :direct_upload_url, presence: true, format: { with: DIRECT_UPLOAD_URL_FORMAT }, if: :direct_upload_url?
+  validates :imageable_id, :imageable_type, presence: true
 
   after_create :transfer_and_cleanup
 
   scope :images, -> { where(type: 'image') }
+
+  def direct_upload_url?
+    direct_upload_url.present?
+  end
 
   def post_process_required?
     %r{^(image|(x-)?application)/(bmp|gif|jpeg|jpg|pjpeg|png|x-png)$}.match(attachment_content_type).present?
@@ -26,7 +30,7 @@ class Medium < ActiveRecord::Base
     objects = s3.buckets[Rails.configuration.aws[:bucket]].objects
 
     if post_process_required?
-      self.attachment = URI.parse direct_upload_url
+      self.attachment = URI.parse direct_upload_url if direct_upload_url?
       self.type = 'image'
     else
       paperclip_file_path = "media/attachments/#{id}/original/#{direct_upload_url_data[:filename]}"
