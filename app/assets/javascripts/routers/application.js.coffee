@@ -11,8 +11,8 @@ class Descendants.Routers.Application extends Backbone.Router
   initialize: ->
     new Descendants.Views.Scroll
 
-  home: ->
-    new Descendants.Views.Home el: 'body'
+  home: =>
+    new Descendants.Views.Home el: 'body', router: this
     new Descendants.Views.Slideshow el: 'div#slideshow'
 
   directorsShow: (slug) ->
