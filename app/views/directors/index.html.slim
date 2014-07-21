@@ -2,10 +2,12 @@
   #slideshow
     - @directors.each do |director|
       = image_tag director.featured.thumb(:hero), id: director.slug
+    = image_tag @joinery_featured.thumb(:hero), id: 'the-joinery'
     nav
       ul#directors
         - @directors.each do |director|
-          li = link_to director.name, director, 'data-slug' => director.slug, id: director.slug
+          li = link_to director.name, director, 'data-slug' => director.slug, id: director.slug, class: 'director'
+        li = link_to 'The Joinery', the_joinery_path, id: 'the-joinery'
 
 h3 About
 .info

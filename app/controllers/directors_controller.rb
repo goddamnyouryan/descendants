@@ -4,6 +4,7 @@ class DirectorsController < ApplicationController
   before_action :render_preview?, only: :index
 
   def index
+    @joinery_featured = Director.joinery.first.featured
   end
 
   def show

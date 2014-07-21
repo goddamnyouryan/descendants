@@ -4,7 +4,7 @@ class Descendants.Views.Home extends Backbone.View
     @router = options.router
 
   events: ->
-    'click ul#directors a': 'loadDirector'
+    'click ul#directors a.director': 'loadDirector'
 
   loadDirector: (event) ->
     event.preventDefault()
