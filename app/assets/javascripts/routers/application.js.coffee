@@ -4,6 +4,7 @@ class Descendants.Routers.Application extends Backbone.Router
     '': 'home'
     'directors/:slug': 'directorsShow'
     'the-joinery': 'joinery'
+    'contact': 'contact'
     'admin': 'adminBase'
     'admin/directors/:director/edit': 'directorForm'
     'admin/directors/:director/videos/:video/edit': 'videoForm'
@@ -20,6 +21,9 @@ class Descendants.Routers.Application extends Backbone.Router
 
   joinery: ->
     new Descendants.Views.Joinery el: 'body'
+
+  contact: ->
+    new Descendants.Views.Map el: 'body'
 
   adminBase: ->
     new Descendants.Views.Sortable
