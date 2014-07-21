@@ -9,7 +9,7 @@
 
   nav {
     @include centered(auto);
-    font-size: 28px;
+    @include serif-bold(28px);
   }
 
   ul {
