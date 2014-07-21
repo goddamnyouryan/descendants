@@ -7,4 +7,10 @@
     margin: 0 0 45px 0;
     border-bottom: 1px solid $text;
   }
+
+  ul.videos {
+    .meta {
+      opacity: 1;
+    }
+  }
 }
