@@ -1,0 +1,19 @@
+h2 Edit Site Content
+= form_for @content, url: admin_content_path do |f|
+  .form-field
+    = f.label :about_headline
+    = f.text_area :about_headline
+
+  .form-field
+    = f.label :about_body
+    = f.text_area :about_body
+
+  .form-field
+    = f.label :joinery_headline
+    = f.text_area :joinery_headline
+
+  .form-field
+    = f.label :joinery_body
+    = f.text_area :joinery_body
+
+  = f.submit

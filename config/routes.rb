@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       end
       collection { post :sort }
     end
+    resource :content, only: [:edit, :update]
 
     root to: 'base#index'
   end

@@ -1,5 +1,10 @@
 class ApplicationController < ActionController::Base
+  before_action :set_content
   protect_from_forgery with: :exception
+
+  def set_content
+    @content = Content.first
+  end
 
   def set_director
     @director = Director.friendly.find director_id
