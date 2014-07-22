@@ -8,4 +8,5 @@ class Descendants.Views.Scroll extends Backbone.View
     event.preventDefault()
     target = $(event.target)
     scrollTo = $("#{target.data('scroll')}")
-    $('html,body').animate({ scrollTop: scrollTo.offset().top }, { easing: 'swing', duration: 500 })
+    offset = scrollTo.offset().top - $('header').outerHeight()
+    $('html,body').animate({ scrollTop: offset }, { easing: 'swing', duration: 500 })
