@@ -28,11 +28,12 @@
   }
 
   li {
-    margin: 0 0 35px 0;
+    margin: 0 0 25px 0;
   }
 
   a {
     letter-spacing: 2px;
+    white-space: nowrap;
 
     &:hover, &.active {
       border-bottom: 2px solid $text;

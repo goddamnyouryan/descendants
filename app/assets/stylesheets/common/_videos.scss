@@ -23,7 +23,7 @@ ul.videos {
   a:hover { color: $text; }
 
   .meta {
-    @include _transition(opacity);
+    @include _transition(all);
     opacity: 0;
     position: absolute;
     width: 100%;

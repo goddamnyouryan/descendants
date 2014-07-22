@@ -3,7 +3,7 @@ class Descendants.Views.Slideshow extends Backbone.View
   initialize: =>
     @activate @$('img').first()
     @centerMenu()
-    setInterval @cycleImages, 5000
+    #setInterval @cycleImages, 5000
 
   events: ->
     'mouseenter a': 'showImage'

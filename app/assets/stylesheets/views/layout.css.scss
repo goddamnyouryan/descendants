@@ -55,7 +55,7 @@ header {
       z-index: 3;
       top: 90px;
       padding: 15px 60px 15px 40px;
-      background: rgba($background, 0.5);
+      background: rgba($background, 0.3);
       opacity: 0;
       visibility: hidden;
     }
@@ -120,7 +120,7 @@ header {
 footer {
   @include clearfix;
   margin: $big-space 0 0 0;
-  padding: 25px 0;
+  padding: 17px 0;
   border-top: 1px solid $text;
   position: relative;
 
@@ -148,12 +148,12 @@ footer {
   h4 {
     font-size: 10px;
     line-height: 16px;
-    color: $secondary;
+    color: $text;
 
     a {
-      color: $secondary;
+      color: $text;
 
-      &:hover { color: $text; text-shadow: none; }
+      &:hover { color: $secondary; text-shadow: none; }
     }
   }
 

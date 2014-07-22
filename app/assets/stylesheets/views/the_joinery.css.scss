@@ -4,6 +4,9 @@
   ul.videos {
     .meta {
       opacity: 1;
+      text-shadow: none;
+
+      &:hover { background: transparent; }
     }
   }
 }
