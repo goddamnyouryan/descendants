@@ -4,20 +4,27 @@
 h2.title Contact Us
 #maps
   .location
-    div#toronto.map
+    - link = 'https://www.google.com/maps/place/439+Wellington+St+W+%23204,+Toronto,+ON+M5V+1E7,+Canada/@43.6433575,-79.3967109,15z/data=!4m2!3m1!1s0x882b34d8d632db65:0x1a01dab6f5476352?hl=en-US'
+    = link_to image_tag('toronto.gif'), link, target: '_blank'
     = render 'shared/toronto'
 
   .location
-    div#la.map
+    - link =  'https://www.google.com/maps/place/1151+N+Highland+Ave,+Los+Angeles,+CA+90038/@34.092116,-118.338994,15z/data=!4m2!3m1!1s0x80c2bf2ec2c90e97:0xc2c86a1635266ff8?hl=en-US'
+    = link_to image_tag('la.gif'), link, target: '_blank'
     = render 'shared/la'
 
+h2.title Principals
 #principals
-  h2 Principals
+  .partner
+    h2 Tasha Litt
+    h3 Partner
+    h4 = link_to 'tasha@descendants.tv', 'mailto:tasha@descendants.tv'
+    h4 C 647.866.1699
 
-  h3 Partner
-  h4 Dan Ford
-
-  h3 Partner / Creative Mentor
-  h4 Mark Zibert
+  .partner
+    h2 Liane Thomas
+    h3 Partner
+    h4 = link_to 'liane@descendants.tv', 'mailto:liane@descendants.tv'
+    h4 C 416.471.1354
 
   p For general inquiries email #{link_to 'hello@descendants.tv', 'mailto:hello@descendants.tv'}

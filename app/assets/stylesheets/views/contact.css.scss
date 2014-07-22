@@ -1,18 +1,16 @@
 #maps {
-  @include float-left;
-  width: 75%;
-  margin: 50px 0 0 0;
+  @include clearfix;
+  margin: 100px 0;
 }
 
 #principals {
-  @include float-right;
+  @include clearfix;
   margin: 50px 0 0 0;
-  text-align: right;
-  width: 25%;
+
+  h2, h3, h4 { margin: 0 0 5px 0; }
 
   h2 {
-    @include sans-bold(18px);
-    margin: 0 0 25px 0;
+    @include serif-bold(18px);
   }
 
   h3 {
@@ -21,7 +19,6 @@
 
   h4 {
     @include sans(14px);
-    margin: 0 0 25px 0;
   }
 
   p {
@@ -29,16 +26,27 @@
   }
 
   a { text-decoration: underline; }
+
+  .partner {
+    @include float-left;
+    width: 45%;
+    margin: 0 0 50px 0;
+
+    &:first-of-type { margin: 0 10% 0 0; }
+  }
 }
 
 .location {
+  @include float-left;
   @include clearfix;
-  margin: 0 0 25px 0;
+  width: 45%;
 
-  .map {
+  &:first-of-type { margin: 0 10% 0 0; }
+
+  img {
     @include float-left;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 277px;
     margin: 0 25px 0 0;
   }
 
@@ -48,7 +56,7 @@
   }
 
   h3 {
-    @include sans-bold(18px);
+    @include serif-bold(18px);
     margin: 0 0 25px 0;
   }
 
