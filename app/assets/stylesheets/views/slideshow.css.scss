@@ -7,7 +7,7 @@
     z-index: 2;
     width: 100%;
     height: 100%;
-    background: rgba($background, 0.5);
+    background: rgba($background, 0.3);
   }
 
   img {
@@ -18,7 +18,7 @@
 
   nav {
     @include centered(auto);
-    @include serif-bold(30px);
+    @include serif-bold(28px);
     z-index: 3;
   }
 
