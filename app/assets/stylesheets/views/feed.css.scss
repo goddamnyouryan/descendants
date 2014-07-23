@@ -10,9 +10,11 @@ ul#feed {
   }
 
   p {
+    @include cancel-float;
     @include sans(14px);
     line-height: 26px;
     margin: 0 0 10px 0;
+    width: 100%;
   }
 
   img {
@@ -21,6 +23,7 @@ ul#feed {
   }
 
   span {
+    display: block;
     text-transform: none;
     font-size: 14px;
   }
