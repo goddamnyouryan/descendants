@@ -21,7 +21,7 @@ $retina: sprite-map('retina/*.png', $spacing: 75px);
     background-size: floor(image-width(sprite-path($retina)) / 2) floor(image-height(sprite-path($retina)) / 2);
     background-image: sprite-url($retina);
     $ypos: (nth(sprite-position($retina, $icon), 2) / 2);
-    background-position: 0 ceil($ypos);
+    background-position: 0 floor($ypos);
   }
 }
 
