@@ -12,14 +12,14 @@ class Descendants.Routers.Application extends Backbone.Router
     new Descendants.Views.Scroll
 
   home: =>
-    new Descendants.Views.Home el: 'body', router: this
+    new Descendants.Views.DirectorList el: 'body', router: this
     new Descendants.Views.Slideshow el: 'div#slideshow'
 
   directorsShow: (slug) ->
     new Descendants.Views.Director(slug: slug).render()
 
   joinery: ->
-    new Descendants.Views.Joinery el: 'body'
+    new Descendants.Views.DirectorList el: 'body', router: this
 
   adminBase: ->
     new Descendants.Views.Sortable
