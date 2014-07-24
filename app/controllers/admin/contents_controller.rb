@@ -14,6 +14,6 @@ class Admin::ContentsController < Admin::BaseController
   private
 
   def content_params
-    params.require(:content).permit(:about_headline, :about_body, :joinery_headline, :joinery_body)
+    params.require(:content).permit(:about_headline, :about_body, :joinery_headline, :joinery_body, :joinery_hero)
   end
 end

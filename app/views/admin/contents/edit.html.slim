@@ -1,5 +1,5 @@
 h2 Edit Site Content
-= form_for @content, url: admin_content_path do |f|
+= form_for @content, url: admin_content_path, html: { multipart: true } do |f|
   .form-field
     = f.label :about_headline
     = f.text_area :about_headline
@@ -15,5 +15,9 @@ h2 Edit Site Content
   .form-field
     = f.label :joinery_body
     = f.text_area :joinery_body
+
+  .form-field
+    = f.label :joinery_hero, 'Joinery Homepage slideshow image'
+    = f.file_field :joinery_hero
 
   = f.submit

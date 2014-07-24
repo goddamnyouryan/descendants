@@ -3,7 +3,7 @@
     #overlay
     - @directors.each do |director|
       = image_tag director.hero_image, id: director.slug
-    = image_tag @joinery_featured.thumb(:hero), id: 'the-joinery'
+    = image_tag @content.joinery_hero_image, id: 'the-joinery'
     nav
       ul#directors
         - @directors.each do |director|
