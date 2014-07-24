@@ -10,7 +10,8 @@
   h2, h3, h4 { margin: 0 0 5px 0; }
 
   h2 {
-    @include serif-bold(18px);
+    @include serif-bold(24px);
+    margin: 0;
   }
 
   h3 {
@@ -18,7 +19,9 @@
   }
 
   h4 {
-    @include sans(14px);
+    &:first-of-type { margin: 20px 0 0 0; }
+
+    @include sans(12px);
   }
 
   p {
@@ -29,25 +32,35 @@
 
   .partner {
     @include float-left;
-    width: 45%;
-    margin: 0 0 50px 0;
 
-    &:first-of-type { margin: 0 10% 0 0; }
+    &:first-of-type { margin: 0 75px 0 0; }
+
+    @include media($break-point) {
+      @include cancel-float;
+
+      &:first-of-type { margin: 0 0 50px 0; }
+    }
   }
 }
 
 .location {
   @include float-left;
   @include clearfix;
-  width: 45%;
+  $location-width: 460px;
 
-  &:first-of-type { margin: 0 10% 0 0; }
+  &:first-of-type { margin: 0 20px 0 0; }
+
+  @include media($width) {
+    @include cancel-float;
+
+    &:first-of-type { margin: 0 0 50px 0; }
+  }
 
   img {
     @include float-left;
-    width: 200px;
-    height: 277px;
-    margin: 0 25px 0 0;
+    width: 180px;
+    height: 180px;
+    margin: 0 50px 0 0;
   }
 
   .info {
@@ -55,14 +68,32 @@
     margin: 40px 0 0 0;
   }
 
+  @include media($location-width) {
+    text-align: center;
+
+    img, .info {
+      @include cancel-float;
+    }
+
+    img {
+      margin: 0 0 20px 0;
+      display: inline;
+    }
+  }
+
   h3 {
-    @include serif-bold(18px);
+    @include serif-bold(24px);
     margin: 0 0 25px 0;
   }
 
   h4 {
-    @include sans-bold(14px);
-    margin: 0 0 10px 0;
+    @include sans-bold(12px);
+
+    &:last-of-type {
+      margin: 20px 0 0 0;
+
+      a { display: none; }
+    }
   }
 
   p {

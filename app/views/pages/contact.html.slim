@@ -1,7 +1,7 @@
 = content_for :header  do
   script src="https://maps.googleapis.com/maps/api/js?key=#{ENV['DESCENDANTS_GOOGLE_MAPS_API_KEY']}&sensor=false&extension=.js"
 
-h2.title Contact Us
+h3.title Contact Us
 #maps
   .location
     - link = 'https://www.google.com/maps/place/439+Wellington+St+W+%23204,+Toronto,+ON+M5V+1E7,+Canada/@43.6433575,-79.3967109,15z/data=!4m2!3m1!1s0x882b34d8d632db65:0x1a01dab6f5476352?hl=en-US'
@@ -13,18 +13,16 @@ h2.title Contact Us
     = link_to image_tag('la.gif'), link, target: '_blank'
     = render 'shared/la'
 
-h2.title Principals
+h3.title Principals
 #principals
   .partner
     h2 Tasha Litt
     h3 Partner
-    h4 = link_to 'tasha@descendants.tv', 'mailto:tasha@descendants.tv'
     h4 C 647.866.1699
+    h4 = link_to 'tasha@descendants.tv', 'mailto:tasha@descendants.tv'
 
   .partner
     h2 Liane Thomas
     h3 Partner
-    h4 = link_to 'liane@descendants.tv', 'mailto:liane@descendants.tv'
     h4 C 416.471.1354
-
-  p For general inquiries email #{link_to 'hello@descendants.tv', 'mailto:hello@descendants.tv'}
+    h4 = link_to 'liane@descendants.tv', 'mailto:liane@descendants.tv'
