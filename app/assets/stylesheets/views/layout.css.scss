@@ -162,7 +162,8 @@ footer {
 
     a {
       @include sprite-background(icon);
-      @include retina-background(icon);
+      height: sprite-height(icon) + 1;
+      @include retina-background(icon, true);
     }
 
     @include media($break-point) {

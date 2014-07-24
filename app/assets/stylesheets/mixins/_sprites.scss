@@ -16,12 +16,16 @@ $retina: sprite-map('retina/*.png', $spacing: 75px);
   }
 }
 
-@mixin retina-background($icon) {
+@mixin retina-background($icon, $up: false) {
   @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 2) {
     background-size: floor(image-width(sprite-path($retina)) / 2) floor(image-height(sprite-path($retina)) / 2);
     background-image: sprite-url($retina);
     $ypos: (nth(sprite-position($retina, $icon), 2) / 2);
-    background-position: 0 floor($ypos);
+    @if $up {
+      background-position: 0 ceil($ypos);
+    } @else {
+      background-position: 0 floor($ypos);
+    }
   }
 }
 
