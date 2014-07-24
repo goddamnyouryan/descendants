@@ -1,14 +1,23 @@
 ul.videos {
-  @include clearfix;
   margin: 0 0 30px 0;
+  text-align: center;
 
   li {
-    @include float-left;
+    display: inline-block;
     margin: 0 20px 20px 0;
     position: relative;
     text-align: center;
 
     &:nth-child(3n) { margin: 0 0 20px 0; }
+
+    @include media($width) {
+      &:nth-child(3n) { margin: 0 20px 20px 0; }
+      &:nth-child(2n) { margin: 0 0 20px 0; }
+    }
+
+    @include media(690px) {
+      margin: 0 0 20px 0 !important;
+    }
 
     img { vertical-align: bottom; }
 
