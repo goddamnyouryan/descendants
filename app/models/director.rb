@@ -28,8 +28,8 @@ class Director < ActiveRecord::Base
     medium.present? ? medium.sample.attachment(style) : Filler::Image.new(style).url
   end
 
-  def hero_image
-    media.present? ? media.first.attachment(:hero) : featured.thumb(:hero)
+  def hero_image(style = :hero)
+    media.present? ? media.first.attachment(style) : featured.thumb(style)
   end
 
   def featured
