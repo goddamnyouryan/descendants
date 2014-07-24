@@ -24,5 +24,4 @@ class Descendants.Views.Director extends Backbone.View
                       videos: @director.get('videos').models
                       featured: video)
                     .fadeIn()
-      videojs(@featured.get('slug')).ready ->
-        this.play()
+      new Descendants.Views.Player id: @featured.get('slug')
