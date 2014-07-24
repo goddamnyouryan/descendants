@@ -30,6 +30,7 @@ header {
 
       a {
         @include sprite-background(logo-small);
+        @include retina-background(logo-small);
         margin: 2px 0 0 0;
       }
     }
@@ -53,11 +54,15 @@ header {
       @include _transition(opacity);
       position: absolute;
       z-index: 3;
-      top: 90px;
+      top: $header-height;
       padding: 15px 60px 15px 40px;
       background: rgba($background, 0.3);
       opacity: 0;
       visibility: hidden;
+
+      @include media($break-point) {
+        top: $header-mobile-height;
+      }
     }
 
     span:hover + ul, ul:hover { visibility: visible; opacity: 1; }

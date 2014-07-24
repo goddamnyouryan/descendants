@@ -6,5 +6,9 @@ section#hero {
 
   img {
     width: 100%;
+
+    @include media(950px) {
+      width: auto;
+    }
   }
 }

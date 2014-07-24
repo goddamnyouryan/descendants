@@ -7,6 +7,10 @@ ul#feed {
     padding: 25px;
     width: 30%;
     margin: 0 0 50px 0;
+
+    @include media($break-point) {
+      width: 100%;
+    }
   }
 
   p {

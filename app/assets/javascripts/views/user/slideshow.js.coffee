@@ -3,7 +3,7 @@ class Descendants.Views.Slideshow extends Backbone.View
   initialize: =>
     @activate @$('img').first()
     @centerMenu()
-    #setInterval @cycleImages, 5000
+    setInterval @cycleImages, 5000
 
   events: ->
     'mouseenter a': 'showImage'
@@ -31,5 +31,6 @@ class Descendants.Views.Slideshow extends Backbone.View
   centerMenu: ->
     nav = @$('nav')
     ul = @$('nav ul')
+    width = if $(window).width() < ul.outerWidth() then 300 else ul.outerWidth()
     nav.css 'height', ul.outerHeight()
-    nav.css 'width', ul.outerWidth()
+    nav.css 'width', width
