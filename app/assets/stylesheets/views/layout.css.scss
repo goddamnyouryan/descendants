@@ -63,7 +63,7 @@ header {
     span:hover + ul, ul:hover { visibility: visible; opacity: 1; }
 
     li {
-      @include serif-bold(16px);
+      @include sans-bold(16px);
       margin: 0 0 15px 0;
 
       &:last-of-type { margin: 0; }
