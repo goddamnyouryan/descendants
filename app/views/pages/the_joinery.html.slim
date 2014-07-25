@@ -1,9 +1,9 @@
 #joinery
   h2.title The Joinery
-  ul.videos
+  ul#directors
     - @directors.each do |director|
       = content_tag_for :li, director, 'data-slug' => director.slug do
-        = link_to director do
+        = link_to director, class: 'director' do
           = image_tag director.hero_image(:thumb)
           .meta
             h2 = director.name

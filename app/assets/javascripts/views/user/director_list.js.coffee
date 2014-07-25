@@ -5,7 +5,6 @@ class Descendants.Views.DirectorList extends Backbone.View
 
   events: ->
     'click ul#directors a.director': 'loadDirector'
-    'click ul.videos a': 'loadDirector'
 
   loadDirector: (event) ->
     event.preventDefault()
