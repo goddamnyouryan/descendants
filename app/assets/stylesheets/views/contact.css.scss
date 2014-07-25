@@ -47,6 +47,7 @@
   @include float-left;
   @include clearfix;
   $location-width: 460px;
+  width: $location-width;
 
   &:first-of-type { margin: 0 20px 0 0; }
 
@@ -56,6 +57,10 @@
     &:first-of-type { margin: 0 0 50px 0; }
   }
 
+  @include media($location-width) {
+    width: auto;
+  }
+
   img {
     @include float-left;
     width: 180px;
@@ -63,15 +68,14 @@
     margin: 0 50px 0 0;
   }
 
-  .info {
+  .address {
     @include float-left;
-    margin: 40px 0 0 0;
   }
 
   @include media($location-width) {
     text-align: center;
 
-    img, .info {
+    img, .address {
       @include cancel-float;
     }
 
