@@ -35,6 +35,8 @@ header {
     }
   }
 
+  ul#social { @include float-right; }
+
   nav {
     @include float-left;
     width: sprite-width(menu);
@@ -74,35 +76,6 @@ header {
     }
   }
 
-  ul#social {
-    @include float-right;
-    @include clearfix;
-
-    li {
-      @include float-left;
-      margin: 0 10px 0 0;
-
-      &:last-of-type { margin: 0; }
-    }
-
-    #twitter {
-      @include retina-background(twitter);
-      @include sprite-background(twitter);
-    }
-
-    #facebook {
-      @include retina-background(facebook);
-      @include sprite-background(facebook);
-    }
-    #instagram {
-      @include retina-background(instagram);
-      @include sprite-background(instagram);
-    }
-
-    @include media($break-point) {
-      display: none;
-    }
-  }
 
   nav, ul#social {
     margin: 7px 0 0 0;
@@ -110,6 +83,35 @@ header {
     @include media($break-point) {
       margin: -2px 0 0 0;
     }
+  }
+}
+
+ul#social {
+  @include clearfix;
+
+  li {
+    @include float-left;
+    margin: 0 10px 0 0;
+
+    &:last-of-type { margin: 0; }
+  }
+
+  #twitter {
+    @include retina-background(twitter);
+    @include sprite-background(twitter);
+  }
+
+  #facebook {
+    @include retina-background(facebook);
+    @include sprite-background(facebook);
+  }
+  #instagram {
+    @include retina-background(instagram);
+    @include sprite-background(instagram);
+  }
+
+  @include media($break-point) {
+    display: none;
   }
 }
 
@@ -123,10 +125,20 @@ header {
 
 footer {
   @include clearfix;
+  $padding: 17px;
   margin: $big-space 0 0 0;
-  padding: 17px 0;
+  padding: $padding 0;
   border-top: 1px solid $text;
   position: relative;
+
+  ul#social {
+    margin: 0 0 $padding 0;
+    display: none;
+
+    @include media($break-point) {
+      display: block;
+    }
+  }
 
   .address {
     @include float-left;
