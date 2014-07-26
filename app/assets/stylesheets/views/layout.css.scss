@@ -25,7 +25,6 @@ header {
     }
 
     @include media($break-point) {
-      @include float-right;
       width: sprite-width(logo-small);
 
       a {
@@ -109,7 +108,7 @@ header {
     margin: 7px 0 0 0;
 
     @include media($break-point) {
-      margin: 0;
+      margin: -2px 0 0 0;
     }
   }
 }
