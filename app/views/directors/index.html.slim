@@ -10,7 +10,7 @@
           li = link_to director.name, director, 'data-slug' => director.slug, id: director.slug, class: 'director'
         li = link_to 'The Joinery', the_joinery_path, id: 'the-joinery'
 
-h3 About
+h3#about About
 .info
   blockquote = @content.about_headline
   p = @content.about_body

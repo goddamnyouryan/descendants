@@ -4,7 +4,7 @@ header
       span Menu
       ul
         li = link_to 'Directors', root_path
-        li = link_to 'About', '#', class: 'scroll', 'data-scroll' => '.info'
+        li = link_to 'About', root_path(anchor: 'about'), class: 'scroll', 'data-scroll' => '.info'
         li = link_to 'Lately', lately_path
         li = link_to 'Contact', contact_path
     ul#social

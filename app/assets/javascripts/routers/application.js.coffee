@@ -2,16 +2,19 @@ class Descendants.Routers.Application extends Backbone.Router
 
   routes: ->
     '': 'home'
+    'about': 'about'
     'directors/:slug': 'directorsShow'
     'the-joinery': 'joinery'
     'admin': 'adminBase'
     'admin/directors/:director/edit': 'directorForm'
     'admin/directors/:director/videos/:video/edit': 'videoForm'
 
-  initialize: ->
-    new Descendants.Views.Scroll
+  about: ->
+    @home()
+    $('a.scroll').click()
 
   home: =>
+    new Descendants.Views.Scroll
     new Descendants.Views.DirectorList el: 'body', router: this
     new Descendants.Views.Slideshow el: 'div#slideshow'
 
