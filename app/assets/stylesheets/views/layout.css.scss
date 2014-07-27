@@ -35,7 +35,13 @@ header {
     }
   }
 
-  ul#social { @include float-right; }
+  ul#social {
+    @include float-right;
+
+    @include media($break-point) {
+      display: none;
+    }
+  }
 
   nav {
     @include float-left;
@@ -106,7 +112,7 @@ ul#social {
     @include sprite-background(facebook);
   }
   #instagram {
-    @include retina-background(instagram);
+    @include retina-background(instagram, true);
     @include sprite-background(instagram);
   }
 
@@ -134,6 +140,14 @@ footer {
   ul#social {
     margin: 0 0 $padding 0;
     display: none;
+
+    #facebook {
+      @include retina-background(facebook, true);
+    }
+
+    #instagram {
+      @include retina-background(instagram, true);
+    }
 
     @include media($break-point) {
       display: block;
