@@ -7,6 +7,7 @@ section#hero
     ul.videos
       - _.each @videos, (video) =>
         li.video data-slug="#{video.get('slug')}" id="video_#{video.get('id')}"
+          == Descendants.Helpers.renderPartial 'video_player', video: video
           a href="/directors/#{@director.get('slug')}"
             img src="#{video.get('thumb')}"
             .meta

@@ -7,6 +7,8 @@ ul.videos, #joinery ul#directors {
     margin: 0 20px 20px 0;
     position: relative;
     text-align: center;
+    width: 300px;
+    height: 170px;
 
     &:nth-child(3n) { margin: 0 0 20px 0; }
 
@@ -17,6 +19,21 @@ ul.videos, #joinery ul#directors {
 
     @include media(690px) {
       margin: 0 0 20px 0 !important;
+    }
+
+    video {
+      position: absolute;
+      padding-top: 0 !important;
+      top: 0; left: 0;
+      z-index: 1;
+      display: none;
+
+      @include media($break-point) {
+        @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 2) {
+          display: block;
+          opacity: 0;
+        }
+      }
     }
 
     img { vertical-align: bottom; }
