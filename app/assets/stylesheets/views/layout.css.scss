@@ -103,12 +103,12 @@ ul#social {
   }
 
   #twitter {
-    @include retina-background(twitter);
+    @include retina-background(twitter, true);
     @include sprite-background(twitter);
   }
 
   #facebook {
-    @include retina-background(facebook);
+    @include retina-background(facebook, true);
     @include sprite-background(facebook);
   }
   #instagram {
@@ -140,14 +140,6 @@ footer {
   ul#social {
     margin: 0 0 $padding 0;
     display: none;
-
-    #facebook {
-      @include retina-background(facebook, true);
-    }
-
-    #instagram {
-      @include retina-background(instagram, true);
-    }
 
     @include media($break-point) {
       display: block;
