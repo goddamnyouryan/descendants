@@ -21,7 +21,7 @@ class Descendants.Views.Videos extends Backbone.View
     @video = new Descendants.Models.Video slug: $(event.target).parents('li').data('slug')
     @video.fetch
       success: =>
-        @loadContent @player(), @videoPlayer(video: @video, preload: 'true'), true
+        @loadContent @player(), @videoPlayer(video: @video, preload: 'auto'), true
         @loadContent @title(), @videoInfo(video: @video, director: @director)
 
   loadContent: (element, content, player = false) ->
