@@ -1,10 +1,10 @@
-h2.title Lately
+h3.title Lately
 ul#feed.js-masonry data-masonry-options='{ "gutter": 42 }'
-  // li
-    p We're making a short documentary series and are looking for people who want to face a genuine, deep-rooted fear of theirs on camera. We're hoping to find stories and challenges that go beyond the more common discomforts (spiders, snakes, heights, etc.) This will be done for a good cause.
-    p Is there an obstacle in your life you have been avoiding out of fear? We would love to hear from you and help you get through it.
-    p Please share this with your buds and reach out to us at #{link_to 'hello@descendants.tv', 'mailto:hello@descendants.tv'}
-    = feed_link 'Facebook', 'https://www.facebook.com/descendantstv/posts/668742909886856?fref=nf'
+  li
+    - link = 'https://www.facebook.com/descendantstv/photos/a.649204915173989.1073741828.647698498657964/676306289130518/?type=1&theater'
+    = feed_image_tag 'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/10563103_676306289130518_2603310719424172886_n.jpg', link
+    p This week we flew to LA with our pals from Lowe Roche to chase sharks, jump out of airplanes and pick a sumo fight, all in the name of a great cause that's very close to our hearts. Can't wait to share these with you guys!
+    = feed_link 'Facebook', link
 
   li
     - link = 'https://www.facebook.com/photo.php?fbid=664961023598378&set=a.664181627009651.1073741829.647698498657964&type=1&theater'
