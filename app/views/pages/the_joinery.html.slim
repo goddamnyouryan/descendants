@@ -8,6 +8,7 @@
           .meta
             h2 = director.name
 
-.info
-  blockquote = @content.joinery_headline
-  p = @content.joinery_body
+- if @content.joinery_headline.present?
+  .info
+    blockquote = @content.joinery_headline
+    p = @content.joinery_body
