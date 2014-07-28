@@ -108,11 +108,11 @@ ul#social {
   }
 
   #facebook {
-    @include retina-background(facebook, true);
+    @include retina-background(facebook);
     @include sprite-background(facebook);
   }
   #instagram {
-    @include retina-background(instagram, true);
+    @include retina-background(instagram);
     @include sprite-background(instagram);
   }
 
