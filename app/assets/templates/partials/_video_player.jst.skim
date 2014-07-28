@@ -1,3 +1,4 @@
-video.video-js.vjs-default-skin id="#{@video.get('slug')}" controls='true' poster="#{@video.get('poster')}" width='auto' height='auto'
+- preload = @preload || 'none'
+video.video-js.vjs-default-skin id="#{@video.get('slug')}" preload="#{preload}" controls='true' poster="#{@video.get('poster')}" width='auto' height='auto'
  source src="#{@video.get('mp4')}" type='video/mp4'
  source src="#{@video.get('ogg')}" type='video/ogg'

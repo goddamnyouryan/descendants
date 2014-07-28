@@ -1,5 +1,5 @@
 section#hero
- == Descendants.Helpers.renderPartial 'video_player', video: @featured
+ == Descendants.Helpers.renderPartial 'video_player', video: @featured, preload: 'true'
 
 .container
   == Descendants.Helpers.renderPartial 'video_info', video: @featured, director: @director
