@@ -1,7 +1,7 @@
 class Descendants.Views.Videos extends Backbone.View
   el: 'body'
 
-  player: -> @$('.video-js')
+  player: -> @$('.video-js').first()
   title: -> @$('div.title')
 
   videoPlayer: JST['partials/_video_player']
@@ -21,10 +21,10 @@ class Descendants.Views.Videos extends Backbone.View
     @video = new Descendants.Models.Video slug: $(event.target).parents('li').data('slug')
     @video.fetch
       success: =>
-        @loadContent @player(), @videoPlayer(video: @video)
+        @loadContent @player(), @videoPlayer(video: @video, preload: 'true'), true
         @loadContent @title(), @videoInfo(video: @video, director: @director)
 
-  loadContent: (element, content) ->
+  loadContent: (element, content, player = false) ->
     element.fadeOut 400, =>
       element.replaceWith(content).fadeIn()
-      new Descendants.Views.Player id: @video.get('slug')
+      new Descendants.Views.Player id: @video.get('slug') if player
