@@ -10,6 +10,9 @@ class Descendants.Routers.Application extends Backbone.Router
     'admin/directors/:director/edit': 'directorForm'
     'admin/directors/:director/videos/:video/edit': 'videoForm'
 
+  initialize: ->
+    new Descendants.Views.Twinkling
+
   about: ->
     @home()
     $('a.scroll').click()
