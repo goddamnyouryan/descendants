@@ -8,7 +8,7 @@
       ul#directors
         - @directors.each do |director|
           li = link_to director.name, director, 'data-slug' => director.slug, id: director.slug, class: 'director'
-        li = link_to 'The Joinery', the_joinery_path, id: 'the-joinery'
+        li = link_to 'Joinery', joinery_path, id: 'the-joinery'
 
 h3#about About
 .info

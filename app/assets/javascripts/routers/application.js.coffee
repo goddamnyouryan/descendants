@@ -4,7 +4,7 @@ class Descendants.Routers.Application extends Backbone.Router
     '': 'home'
     'about': 'about'
     'directors/:slug': 'directorsShow'
-    'the-joinery': 'joinery'
+    'joinery': 'joinery'
     'lately': 'lately'
     'admin': 'adminBase'
     'admin/directors/:director/edit': 'directorForm'

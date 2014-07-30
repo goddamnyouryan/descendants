@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   resources :directors, only: [:index, :show]
 
-  %w(lately the-joinery contact).each do |page|
-    get page, controller: :pages, action: page.underscore
+  %w(lately joinery contact).each do |page|
+    get page, controller: :pages, action: page
   end
 
   namespace :admin do
