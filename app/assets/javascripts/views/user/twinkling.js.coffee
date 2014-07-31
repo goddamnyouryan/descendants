@@ -10,7 +10,7 @@ class Descendants.Views.Twinkling extends Backbone.View
     @stars = []
     @setupImages()
     @addStars()
-    setInterval @twinkle, 300
+    setInterval @twinkle, 750
 
   setupImages: ->
     number = 0
