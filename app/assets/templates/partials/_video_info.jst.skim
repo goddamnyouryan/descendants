@@ -1,5 +1,5 @@
 .title
-  h2 = @director.get('name')
+  h2 = @video.get('director')
 
   .meta
     h3 = @video.get('title')
