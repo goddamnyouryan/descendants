@@ -10,5 +10,5 @@ class Descendants.Views.DirectorList extends Backbone.View
     event.preventDefault()
     slug = $(event.target).data('slug')
     slug = $(event.target).parents('li').data('slug') || $(event.target).data('slug')
-    @router.navigate("/directors/#{slug}")
+    @router.navigate("/directors/#{slug}", trigger: true)
     new Descendants.Views.Director(slug: slug).render()

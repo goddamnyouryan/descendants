@@ -5,7 +5,7 @@ class Descendants.Views.Scroll extends Backbone.View
     'click a.scroll': 'scrollToSection'
 
   scrollToSection: (event) ->
-    event.preventDefault()
+    event.preventDefault() if window.location.pathname == '/'
     target = $(event.target)
     scrollTo = $("#{target.data('scroll')}")
     offset = scrollTo.offset().top - $('header').outerHeight()
