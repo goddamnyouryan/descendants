@@ -2,7 +2,7 @@ section#hero
  == Descendants.Helpers.renderPartial 'video_player', video: @featured, preload: 'auto'
 
 .container
-  == Descendants.Helpers.renderPartial 'video_info', video: @featured, director: @director
+  == Descendants.Helpers.renderPartial 'video_info', video: @featured
   .info
     ul.videos
       - _.each @videos, (video) =>

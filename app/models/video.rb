@@ -19,6 +19,18 @@ class Video < ActiveRecord::Base
     title_changed? || client_changed?
   end
 
+  def next
+    videos = director.videos
+    subsequent = videos[self.index(videos) + 1]
+    subsequent = videos[0] if subsequent.nil?
+    subsequent.slug
+  end
+
+  def index(array)
+    hash = Hash[array.map.with_index.to_a]
+    index = hash[self]
+  end
+
   def ogg
     find_media('ogg')
   end
