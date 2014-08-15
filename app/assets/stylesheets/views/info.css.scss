@@ -57,7 +57,7 @@ blockquote, p {
 }
 
 blockquote {
-  @include serif-bold(23px);
+  @include serif-bold(22px);
   line-height: 33px;
   letter-spacing: 1px;
   width: 45%;
@@ -70,7 +70,7 @@ blockquote {
 }
 
 p {
-  @include serif(16px);
+  @include serif(18px);
   width: 50%;
   line-height: 26px;
 
