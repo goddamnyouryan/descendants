@@ -2,7 +2,7 @@ class Descendants.Views.Twinkling extends Backbone.View
   el: 'body'
 
   initialize: (options) ->
-    @starCount = 100
+    @starCount = 20
     @imagesCount = 10
     @width = $(window).width()
     @height = $(window).height()
