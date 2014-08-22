@@ -1,4 +1,5 @@
 .star {
+  @include _transition(opacity, 0.5s, 1s);
   position: fixed;
   z-index: -1;
 }
