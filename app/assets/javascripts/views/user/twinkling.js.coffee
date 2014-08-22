@@ -23,7 +23,7 @@ class Descendants.Views.Twinkling extends Backbone.View
     setTimeout @removeStars, 1500
 
   fadeInStar: =>
-    @$('img.star').css('opacity', 1)
+    @$('img.star').css('opacity', 0.9)
 
   removeStars: =>
     stars = @$('img.star')
