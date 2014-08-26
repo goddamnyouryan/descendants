@@ -11,7 +11,7 @@ class Descendants.Routers.Application extends Backbone.Router
     'admin/directors/:director/videos/:video/edit': 'videoForm'
 
   initialize: ->
-    new Descendants.Views.Twinkling
+    #new Descendants.Views.Twinkling
 
   about: ->
     @home()
