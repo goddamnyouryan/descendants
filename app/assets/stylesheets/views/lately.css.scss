@@ -1,0 +1,55 @@
+ul.juicer-feed {
+  @include serif(16px);
+  line-height: 24px;
+  text-transform: none;
+
+  .feed-item {
+    margin-bottom: 60px !important;
+  }
+
+  img {
+    margin-bottom: 30px;
+  }
+
+  .meta {
+    @include sans-bold(12px);
+    @include clearfix;
+    border-top: 1px solid $text;
+    padding-top: 20px;
+    margin-top: 35px;
+    text-transform: uppercase;
+
+    ul {
+      @include float-left;
+    }
+
+    nav {
+      @include float-right;
+    }
+
+    li {
+      display: inline-block;
+
+      &:last-of-type { display: none; }
+    }
+
+    .twitter {
+      @include retina-background(twitter, true);
+      @include sprite-background(twitter);
+    }
+
+    .facebook {
+      @include retina-background(facebook);
+      @include sprite-background(facebook);
+    }
+
+    .instagram {
+      @include retina-background(instagram);
+      @include sprite-background(instagram);
+    }
+  }
+
+  span {
+    margin-left: 5px;
+  }
+}

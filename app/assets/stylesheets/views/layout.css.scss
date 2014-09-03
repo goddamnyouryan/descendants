@@ -116,6 +116,7 @@ ul#social {
     @include retina-background(facebook);
     @include sprite-background(facebook);
   }
+
   #instagram {
     @include retina-background(instagram);
     @include sprite-background(instagram);
