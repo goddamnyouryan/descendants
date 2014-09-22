@@ -9,4 +9,8 @@
   @include media($break-point) {
     min-height: 150px;
   }
+
+  .vjs-tech {
+    position: relative !important;
+  }
 }
