@@ -29,5 +29,5 @@ $fonts: 'BrownTT-Light', 'BrownTT-Regular', 'BrownTT-Bold', 'ChronicleDisp-Roman
 @mixin sans-light($font-size) { @include font-format(nth($fonts, 1), $font-size); }
 @mixin sans($font-size) { @include font-format(nth($fonts, 2), $font-size); }
 @mixin sans-bold($font-size) { @include font-format(nth($fonts, 3), $font-size); }
-@mixin serif($font-size) { @include font-format(nth($fonts, 4), $font-size, true); }
-@mixin serif-bold($font-size) { @include font-format(nth($fonts, 5), $font-size, true); }
+@mixin serif($font-size) { @include font-format(nth($fonts, 4), $font-size, false); }
+@mixin serif-bold($font-size) { @include font-format(nth($fonts, 5), $font-size, false); }
