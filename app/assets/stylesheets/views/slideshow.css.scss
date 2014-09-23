@@ -11,10 +11,12 @@
   }
 
   img {
+    @include translateX(-50%);
     display: none;
     position: relative;
     left: 50%;
-    @include translateX(-50%);
+     -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1, M12=0, M21=0, M22=1, SizingMethod='auto expand')";
+     z-index: 1;
 
     &.active { display: block; }
   }
