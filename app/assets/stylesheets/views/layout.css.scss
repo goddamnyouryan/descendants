@@ -3,8 +3,10 @@
   position: fixed;
   z-index: -1;
 }
+
 header {
   @include pie-clearfix;
+  background: $background;
   background: rgba($background, 0.3);
   text-align: center;
   padding: 17px 0;
@@ -68,6 +70,7 @@ header {
       z-index: 3;
       top: $header-height;
       padding: 15px 60px 15px 40px;
+      background: $background;
       background: rgba($background, 0.3);
       opacity: 0;
       visibility: hidden;
