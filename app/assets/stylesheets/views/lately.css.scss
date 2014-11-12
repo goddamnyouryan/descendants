@@ -34,6 +34,10 @@ ul.juicer-feed {
       &:last-of-type { display: none; }
     }
 
+    .comments {
+      &:after { content: ' comments'; }
+    }
+
     .twitter {
       @include retina-background(twitter, true);
       @include sprite-background(twitter);
