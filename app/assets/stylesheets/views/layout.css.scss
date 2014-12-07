@@ -138,7 +138,7 @@ ul#social {
   }
 }
 
-footer {
+footer, h2.juicer {
   @include clearfix;
   $padding: 17px;
   margin: $big-space 0 0 0;
