@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
   def joinery
-    @directors = Director.joinery.includes(:videos).joins(:videos).uniq
+    @directors = Director.joinery.active.includes(:videos).joins(:videos).uniq
   end
 end
