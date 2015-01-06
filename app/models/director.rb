@@ -8,6 +8,8 @@ class Director < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
 
   default_scope { order('directors.position ASC') }
+  scope :active, -> { where(active: true) }
+  scope :inactive, -> { where(active: false) }
   scope :joinery, -> { where(joinery: true) }
   scope :normal, -> { where(joinery: false) }
 

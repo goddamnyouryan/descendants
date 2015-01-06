@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140722013821) do
+ActiveRecord::Schema.define(version: 20150106214451) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20140722013821) do
     t.text     "bio"
     t.boolean  "joinery",    default: false, null: false
     t.text     "headline"
+    t.boolean  "active",     default: false, null: false
   end
 
   add_index "directors", ["slug"], name: "index_directors_on_slug", unique: true, using: :btree

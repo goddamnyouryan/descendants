@@ -1,9 +1,21 @@
-h2 Directors (Drag to Reorder)
+h2 Active Directors (Drag to Reorder)
 = sortable_list sort_admin_directors_path do
-  - @directors.each do |director|
+  - @active_directors.each do |director|
     = content_tag_for :li, director do
       h3 = link_to director.name, director
       nav
         ul
           li = link_to 'Edit', edit_admin_director_path(director)
           li = link_to 'Delete', admin_director_path(director), delete_confirm(director.name)
+
+- if @inactive_directors.present?
+  h2 Inactive Directors (Drag to Reorder) (Not live)
+  = sortable_list sort_admin_directors_path do
+    - @inactive_directors.each do |director|
+      = content_tag_for :li, director do
+        h3 = link_to director.name, director
+        nav
+          ul
+            li = link_to 'View', director_path(director)
+            li = link_to 'Edit', edit_admin_director_path(director)
+            li = link_to 'Delete', admin_director_path(director), delete_confirm(director.name)

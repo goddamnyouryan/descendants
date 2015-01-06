@@ -43,7 +43,7 @@ class Admin::DirectorsController < Admin::BaseController
   private
 
   def director_params
-    params.require(:director).permit(:name, :headline, :bio, :joinery, :hero)
+    params.require(:director).permit(:name, :headline, :bio, :joinery, :hero, :active)
   end
 
   def redirect

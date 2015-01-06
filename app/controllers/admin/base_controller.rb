@@ -3,7 +3,8 @@ class Admin::BaseController < ApplicationController
   before_filter :password_protect
 
   def index
-    @directors = Director.all
+    @active_directors = Director.active
+    @inactive_directors = Director.inactive
   end
 
   private

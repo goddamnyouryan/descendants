@@ -21,4 +21,8 @@
     = f.check_box :joinery
     = f.label :joinery, 'Show this director on the joinery? (Otherwise it will show up on the homepage)'
 
+  .form-field
+    = f.check_box :active
+    = f.label :active, 'Make this director active? (Show them on the homepage or joinery page)'
+
   = f.submit 'Save'
