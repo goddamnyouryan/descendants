@@ -5,7 +5,7 @@
       = image_tag director.hero_image, id: director.slug
     = image_tag @content.joinery_hero_image, id: 'the-joinery'
     nav
-      ul#directors
+      ul#directors class="#{column_class(@directors.count)}"
         - @directors.each do |director|
           li = link_to director.name, director, 'data-slug' => director.slug, id: director.slug, class: 'director'
         li = link_to 'Joinery', joinery_path, id: 'the-joinery'

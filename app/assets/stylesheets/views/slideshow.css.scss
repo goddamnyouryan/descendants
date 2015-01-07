@@ -25,6 +25,7 @@
     @include centered(auto);
     @include serif-bold(28px);
     z-index: 3;
+    max-width: $columns-width;
   }
 
   ul {
@@ -33,6 +34,19 @@
 
     @include media($nav-break-point) {
       display: block;
+    }
+
+    &.columns {
+
+      li {
+        display: inline-block;
+        width: 50%;
+
+        @include media($columns-width) {
+          display: block;
+          width: auto;
+        }
+      }
     }
   }
 

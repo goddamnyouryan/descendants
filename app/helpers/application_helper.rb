@@ -11,6 +11,10 @@ module ApplicationHelper
     end
   end
 
+  def column_class(count)
+    count > 5 ? 'columns': ''
+  end
+
   def sortable_list(path, &block)
     options = { class: 'sortable', 'data-sort-url' => path }
     content_tag :ul, options do
