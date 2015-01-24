@@ -12,7 +12,7 @@ ul.juicer-feed {
     margin-bottom: 30px;
   }
 
-  .meta {
+  .j-meta {
     @include sans-bold(12px);
     @include clearfix;
     border-top: 1px solid $text;
