@@ -3,7 +3,8 @@ class DirectorsController < ApplicationController
   before_action :set_directors, only: :index
 
   def index
-    @joinery_featured = Director.joinery.first.featured
+    joinery = Director.joinery.first
+    @joinery_featured = joinery.present? ? joinery.featured : nil
   end
 
   def show
