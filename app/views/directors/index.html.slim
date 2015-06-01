@@ -6,9 +6,12 @@
     = image_tag @content.joinery_hero_image, id: 'the-joinery'
     nav
       ul#directors class="#{column_class(@directors.count)}"
-        - @directors.each do |director|
-          li = link_to director.name, director, 'data-slug' => director.slug, id: director.slug, class: 'director'
-        // li = link_to 'Joinery', joinery_path, id: 'the-joinery'
+        - if @directors.present?
+          - @directors.each do |director|
+            li = link_to director.name, director, 'data-slug' => director.slug, id: director.slug, class: 'director'
+          // li = link_to 'Joinery', joinery_path, id: 'the-joinery'
+        - else
+            li.director Check back later for more updates.
 
 h3#about About
 .info
