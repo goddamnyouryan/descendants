@@ -1,5 +1,100 @@
 h3.title Lately
 script type='text/javascript' src='http://assets.juicer.io/embed.js'
+link href='//assets.juicer.io/embed.css' media='all' rel='stylesheet' type='text/css'
 ul class='juicer-feed' data-feed-id='descendants' data-columns='3'
 
 h2.juicer Powered by #{link_to 'Juicer', 'http://www.juicer.io'}
+
+css:
+  .juicer-feed .j-message p {
+    width: 100%;
+    display: block;
+    float: none;
+  }
+
+  .juicer-feed.modern li.feed-item {
+    background: transparent;
+    border: none;
+  }
+
+  .juicer-feed.modern .j-message {
+    color: white;
+  }
+
+  .j-poster h3 { color: white; }
+
+  .juicer-feed.modern .j-poster {
+    padding: 14px 0 12px;
+  }
+
+  .juicer-feed.modern .j-text {
+    padding: 20px 0;
+  }
+
+  ul.juicer-feed .j-meta li:last-of-type {
+    display: none;
+  }
+
+  ul.juicer-feed .j-meta .comments {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  ul.juicer-feed .j-meta .comments:before {
+    content: '';
+  }
+
+  ul.juicer-feed .j-meta .comments:after {
+    content: ' comments';
+  }
+
+  ul.juicer-feed .j-meta {
+    border-top: 1px solid #808080;
+    padding-top: 10px;
+  }
+
+  ul.juicer-feed .j-meta .j-facebook, ul.juicer-feed .j-meta .j-instagram {
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    display: block;
+  }
+
+  ul.juicer-feed .j-meta a:before {
+    content: '';
+  }
+
+  ul.juicer-feed .j-meta .j-facebook, ul.juicer-feed .j-meta .j-instagram {
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    display: block;
+  }
+
+  ul.juicer-feed .j-meta a:before {
+    content: '';
+  }
+
+  ul.juicer-feed .j-meta .j-facebook {
+    background-image: url('/assets/map/facebook.png');
+  }
+
+  ul.juicer-feed .j-meta .j-instagram {
+    background-image: url('/assets/map/instagram.png');
+  }
+
+  ul.juicer-feed .j-meta .j-facebook {
+    background-image: url('/assets/map/facebook.png');
+  }
+
+  ul.juicer-feed .j-meta .j-instagram {
+    background-image: url('/assets/map/instagram.png');
+  }
+
+  .j-loading {
+    border-color: #fff;
+  }
+
+  .j-loading:before {
+    background-color: #fff;
+  }

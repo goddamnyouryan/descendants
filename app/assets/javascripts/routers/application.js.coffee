@@ -5,7 +5,6 @@ class Descendants.Routers.Application extends Backbone.Router
     'about': 'about'
     'directors/:slug': 'directorsShow'
     'joinery': 'joinery'
-    'lately': 'lately'
     'admin': 'adminBase'
     'admin/directors/:director/edit': 'directorForm'
     'admin/directors/:director/videos/:video/edit': 'videoForm'
@@ -27,9 +26,6 @@ class Descendants.Routers.Application extends Backbone.Router
 
   joinery: ->
     new Descendants.Views.DirectorList el: 'body', router: this
-
-  lately: ->
-    new Descendants.Views.Lately el: 'ul#feed'
 
   adminBase: ->
     new Descendants.Views.Sortable
